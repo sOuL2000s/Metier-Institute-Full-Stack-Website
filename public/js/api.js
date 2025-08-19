@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000/api'; // Ensure this matches your backend port when running server.js
+const BASE_URL = 'https://m-tier-institute-full-stack-website.onrender.com/api'; // Ensure this matches your backend port when running server.js
 
 /**
  * Fetches data from the specified API endpoint.
