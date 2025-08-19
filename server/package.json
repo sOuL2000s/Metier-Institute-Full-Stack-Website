@@ -1,0 +1,16 @@
+{
+  "name": "metier-institute-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Metier Institute website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Mystic Vision",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

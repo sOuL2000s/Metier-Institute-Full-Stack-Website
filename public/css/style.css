@@ -1,0 +1,494 @@
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Palette Variables */
+:root {
+    --primary-color: #0056b3; /* A deeper blue for emphasis, replacing 007bff */
+    --secondary-color: #2c3e50; /* Dark blue/grey for headers, footers */
+    --accent-color: #28a745; /* Green for success/call to action */
+    --text-color-dark: #333;
+    --text-color-light: #f8f8f8;
+    --background-light: #f9fbfd; /* Lighter background */
+    --background-card: #ffffff;
+    --border-color: #e0e0e0; /* Lighter border */
+    --shadow-light: rgba(0,0,0,0.08);
+    --shadow-medium: rgba(0,0,0,0.15);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Modern, readable body font */
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background-color: var(--background-light);
+    display: flex; /* For sticky footer */
+    flex-direction: column; /* For sticky footer */
+    min-height: 100vh; /* For sticky footer */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Consistent padding */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Bold, modern headings */
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.8em; /* Slightly larger */
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0; /* Align with padding-bottom */
+    transform: translateX(-50%);
+    width: 80px; /* Wider underline */
+    height: 4px; /* Thicker underline */
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+section {
+    padding: 60px 0;
+    background-color: var(--background-card);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow-light); /* More pronounced shadow */
+    transition: all 0.3s ease;
+}
+
+/* Header */
+.header {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    padding: 20px 0;
+    box-shadow: 0 3px 10px var(--shadow-medium);
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping of logo/nav on smaller screens */
+}
+
+/* --- LOGO STYLES (UPDATED FOR IMAGE LOGO) --- */
+.logo {
+    margin-bottom: 0; /* Removed margin previously for tagline */
+}
+
+/* Flexbox container for the logo and icon */
+.logo a {
+    display: flex; /* Makes the anchor a flex container */
+    align-items: center; /* Vertically centers items */
+    gap: 10px; /* Space between the main logo and the icon */
+    text-decoration: none; /* Remove underline from the logo link */
+}
+
+.main-logo-img {
+    max-height: 70px; /* Slightly reduced height for cleaner look */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures proper display within its container */
+}
+
+.logo-icon-img {
+    max-height: 70px; /* Consistent with main logo */
+    width: auto;
+    display: block;
+}
+
+/* Hide the old text-based logo elements */
+.logo-main,
+.logo-main::after,
+.logo-tagline {
+    display: none;
+}
+/* --- END LOGO STYLES --- */
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: var(--text-color-light);
+    font-weight: 600; /* Slightly less bold */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/images/hero_background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center; /* Ensures text is centered */
+    padding: 120px 20px; /* More vertical padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px; /* Ensure sufficient height */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px var(--shadow-medium); /* Deeper shadow for hero */
+}
+
+.hero-section h1 {
+    font-size: 4em; /* Larger, more impactful */
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.5em; /* Larger sub-text */
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.hero-section .btn {
+    display: inline-block; /* Essential for button-like behavior */
+    background-color: #007bff;
+    color: var(--text-color-light) !important; /* Ensure button text is white */
+    padding: 15px 35px; /* More generous padding */
+    border-radius: 50px; /* Pill shape */
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* Programs, Faculties, Institutions, Tests Sections - Grid/Flex Layouts */
+.programs-grid, .faculty-grid, .institutions-grid, .tests-list {
+    display: grid;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.programs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.faculty-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.institutions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px; /* More padding */
+    text-align: center;
+    box-shadow: 0 3px 10px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* For flexible content inside cards */
+    flex-direction: column;
+    justify-content: space-between; /* Pushes content to top/bottom if height varies */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Faculty Specific Styles */
+.faculty-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faculty-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures image covers the area */
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+}
+
+.faculty-card h3 {
+    margin-bottom: 5px;
+}
+
+.faculty-card .designation {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.faculty-card ul {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+}
+
+.faculty-card ul li {
+    background-color: var(--background-light); /* Lighter background for list items */
+    border-left: 3px solid var(--primary-color);
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow on list items */
+}
+
+/* Institution Specific Styles */
+.institution-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px; /* Slightly smaller radius for image within card */
+    margin-bottom: 15px;
+}
+
+.institution-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.institution-card .city {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.institution-card p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.institution-card a {
+    display: inline-block; /* Essential for button-like behavior */
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    padding: 12px 25px; /* More padding */
+    border-radius: 50px; /* Pill shape */
+    font-size: 1em; /* Slightly larger font */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.institution-card a:hover {
+    background-color: #218838;
+    text-decoration: none;
+}
+
+/* Tests Section */
+.tests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.test-item {
+    background-color: var(--background-card); /* Ensure consistency */
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.test-item h3 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.test-item p {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.test-item p strong {
+    color: #333;
+}
+
+
+/* General Page Layout - ensures footer is pushed to bottom */
+
+main {
+    flex: 1; /* Pushes footer to the bottom on pages with less content */
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--background-card); /* Consistent background */
+    text-align: center;
+}
+
+/* For specific pages, adjust padding/margin */
+#programs-page,
+#faculties-page,
+#institutions-page,
+#tests-page,
+#contact-page { /* All full-page sections */
+    padding-top: 40px; /* More consistent padding */
+    padding-bottom: 60px;
+    margin-top: 0; /* Remove top margin from default section */
+    box-shadow: none; /* Remove shadow if desired for full width pages */
+    border-radius: 0;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* Placeholder for images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Adjustments */
+/* Tablet and smaller screens */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+    h2::after {
+        width: 60px;
+    }
+
+    .navbar ul li {
+        margin-left: 15px;
+    }
+
+    .hero-section {
+        padding: 80px 15px;
+        min-height: 450px;
+    }
+    .hero-section h1 {
+        font-size: 3em;
+    }
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    .card {
+        padding: 20px;
+    }
+    .card h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Mobile and smaller screens */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .logo a {
+        flex-direction: column; /* Stack logo elements vertically on small screens */
+        gap: 5px; /* Reduce gap */
+    }
+    .main-logo-img,
+    .logo-icon-img {
+        max-height: 50px; 
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .navbar ul li {
+        margin: 0 0 10px 0; /* No left margin, add bottom margin */
+    }
+    .navbar ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-top: 30px;
+    }
+
+    .hero-section {
+        padding: 60px 15px;
+        min-height: 350px;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+}

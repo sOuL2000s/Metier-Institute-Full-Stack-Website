@@ -1,0 +1,103 @@
+{
+  "programs": [
+    {
+      "id": 1,
+      "title": "MBA Entrance Test Preparation",
+      "description": "Comprehensive coaching for all major MBA entrance exams, focusing on fundamental concepts and advanced strategies."
+    },
+    {
+      "id": 2,
+      "title": "Exclusive Mentoring for CAT, XAT, NMAT, SNAP etc.",
+      "description": "Personalized one-on-one and small-group mentoring sessions tailored to individual student needs and target exams."
+    }
+  ],
+  "faculties": [
+    {
+      "id": 1,
+      "name": "Sabyasachi Sarkar",
+      "designation": "Highly Experienced Faculty in Test Prep Industry",
+      "subjects": [
+        "Quantitative Ability",
+        "Data Interpretation and Logical Reasoning",
+        "Verbal Ability and Reading Comprehension"
+      ],
+      "image": "/assets/images/faculty_soumyadip.jpg"
+    }
+  ],
+  "institutions": [
+    {
+      "id": 1,
+      "name": "Indian Institute of Management Ahmedabad (IIMA)",
+      "city": "Ahmedabad",
+      "description": "One of India's premier management institutes, renowned for its academic rigor and research.",
+      "image": "/assets/images/iima.jpg",
+      "link": "https://www.iima.ac.in/"
+    },
+    {
+      "id": 2,
+      "name": "Indian Institute of Management Bangalore (IIMB)",
+      "city": "Bengaluru",
+      "description": "Known for its vibrant campus and strong emphasis on entrepreneurship and innovation.",
+      "image": "/assets/images/iimb.jpg",
+      "link": "https://www.iimb.ac.in/"
+    },
+    {
+      "id": 3,
+      "name": "Indian Institute of Management Calcutta (IIMC)",
+      "city": "Kolkata",
+      "description": "The first IIM to be established, famous for its finance and consulting programs.",
+      "image": "/assets/images/iimc.jpg",
+      "link": "https://www.iimcal.ac.in/"
+    },
+    {
+      "id": 4,
+      "name": "XLRI - Xavier School of Management",
+      "city": "Jamshedpur",
+      "description": "A top-ranked private business school with a strong focus on ethics and human resource management.",
+      "image": "/assets/images/xlri.jpg",
+      "link": "https://www.xlri.ac.in/"
+    },
+    {
+      "id": 5,
+      "name": "Symbiosis Institute of Business Management (SIBM Pune)",
+      "city": "Pune",
+      "description": "Part of Symbiosis International University, offering diverse MBA programs and known for its vibrant student life.",
+      "image": "/assets/images/sibm.jpg",
+      "link": "https://www.sibm.edu/"
+    },
+    {
+      "id": 6,
+      "name": "Narsee Monjee Institute of Management Studies (NMIMS)",
+      "city": "Mumbai",
+      "description": "A leading private university offering a wide range of management and other professional programs.",
+      "image": "/assets/images/nmims.jpg",
+      "link": "https://www.nmims.edu/"
+    }
+  ],
+  "tests": [
+    {
+      "id": 1,
+      "name": "CAT (Common Admission Test)",
+      "time": "Annually (typically November/December)",
+      "qualification": "Bachelor's degree with minimum 50% aggregate marks (45% for SC/ST/PwD candidates)."
+    },
+    {
+      "id": 2,
+      "name": "XAT (Xavier Aptitude Test)",
+      "time": "Annually (typically early January)",
+      "qualification": "Bachelor's degree of minimum three years duration or equivalent."
+    },
+    {
+      "id": 3,
+      "name": "NMAT by GMAC",
+      "time": "Testing window from October to December",
+      "qualification": "Bachelor's degree (10+2+3 or 10+2+4) with 50% aggregate marks."
+    },
+    {
+      "id": 4,
+      "name": "SNAP (Symbiosis National Aptitude Test)",
+      "time": "Annually (typically December)",
+      "qualification": "Graduate with minimum 50% marks (45% for SC/ST categories)."
+    }
+  ]
+}
