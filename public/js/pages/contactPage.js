@@ -1,5 +1,6 @@
-// No dynamic rendering needed for the contact page, as its content is static in HTML.
-// This file serves as a placeholder if future dynamic elements are added.
+import { setupMobileNavbarToggle } from '../navbar.js'; // NEW: Import mobile navbar toggle function
+
 document.addEventListener('DOMContentLoaded', () => {
-    // console.log('Contact page loaded.'); // Removed console log for cleaner output
+    // Setup mobile navigation toggle for all pages
+    setupMobileNavbarToggle();
 });

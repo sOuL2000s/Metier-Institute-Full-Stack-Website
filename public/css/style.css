@@ -5,18 +5,21 @@
     box-sizing: border-box;
 }
 
-/* Color Palette Variables */
+/* Color Palette Variables - Updated for more vibrancy and professionalism */
 :root {
-    --primary-color: #0056b3; /* A deeper blue for emphasis, replacing 007bff */
-    --secondary-color: #2c3e50; /* Dark blue/grey for headers, footers */
-    --accent-color: #28a745; /* Green for success/call to action */
-    --text-color-dark: #333;
-    --text-color-light: #f8f8f8;
-    --background-light: #f9fbfd; /* Lighter background */
-    --background-card: #ffffff;
-    --border-color: #e0e0e0; /* Lighter border */
-    --shadow-light: rgba(0,0,0,0.08);
-    --shadow-medium: rgba(0,0,0,0.15);
+    --primary-color: #007BFF; /* A vibrant, standard blue for brand elements and links */
+    --secondary-color: #2A3B4D; /* Deep sophisticated blue-grey for headers, footers */
+    --accent-color: #27AE60; /* NEW: Lively Emerald Green for calls to action, highlights */
+    --accent-color-hover: #219150; /* NEW: Darker shade of Emerald Green for hover */
+    --text-color-dark: #333333;
+    --text-color-light: #F9F9F9;
+    --background-light: #F8F9FA; /* NEW: Even lighter, subtle off-white background for main body */
+    --background-card: #FFFFFF;
+    --border-color: #E0E6EB; /* Light grey border, softer */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* NEW: Softer initial shadow for cards */
+    --shadow-medium: rgba(0, 0, 0, 0.2); /* NEW: More pronounced shadow for hero/header on hover */
+
+    --header-height: 106px; /* NEW: Define header height for mobile menu positioning */
 }
 
 body {
@@ -29,10 +32,15 @@ body {
     min-height: 100vh; /* For sticky footer */
 }
 
+/* NEW: Prevents scrolling when mobile menu is open */
+body.nav-open {
+    overflow: hidden;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px; /* Consistent padding */
+    padding: 25px; /* NEW: Consistent, more generous padding */
 }
 
 a {
@@ -46,77 +54,73 @@ a:hover {
     color: var(--secondary-color);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 { /* Added h4 to ensure consistent font */
     font-family: 'Montserrat', sans-serif; /* Bold, modern headings */
     color: var(--secondary-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* NEW: Increased bottom margin for headings */
+    font-weight: 700; /* Ensure headings are bold */
 }
 
 h2 {
     text-align: center;
-    margin-top: 40px;
-    font-size: 2.8em; /* Slightly larger */
+    margin-top: 50px; /* NEW: More top margin for sections */
+    font-size: 3.5em; /* NEW: Larger and more impactful */
     position: relative;
-    padding-bottom: 10px;
-    font-weight: 700;
+    padding-bottom: 20px; /* NEW: Increased padding for more prominent underline */
 }
 
 h2::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 0; /* Align with padding-bottom */
+    bottom: 0;
     transform: translateX(-50%);
-    width: 80px; /* Wider underline */
-    height: 4px; /* Thicker underline */
-    background-color: var(--primary-color);
-    border-radius: 2px;
+    width: 120px; /* NEW: Wider underline */
+    height: 6px; /* NEW: Thicker underline */
+    background-color: var(--primary-color); /* Use primary color */
+    border-radius: 3px; /* Half of height for rounded caps */
 }
 
 section {
-    padding: 60px 0;
+    padding: 80px 0; /* NEW: More vertical padding for sections */
     background-color: var(--background-card);
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px var(--shadow-light); /* More pronounced shadow */
-    transition: all 0.3s ease;
+    margin-bottom: 30px; /* NEW: More space between sections */
+    border-radius: 12px; /* NEW: Slightly more rounded corners */
+    box-shadow: 0 8px 30px var(--shadow-light); /* NEW: Softer, more modern initial shadow */
+    transition: all 0.4s ease; /* Smoother transitions for hover effects */
 }
 
 /* Header */
 .header {
     background-color: var(--secondary-color);
     color: var(--text-color-light);
-    padding: 20px 0;
-    box-shadow: 0 3px 10px var(--shadow-medium);
-    position: sticky; /* Make header sticky */
+    padding: 18px 0; /* NEW: Slightly increased vertical padding for sleekness */
+    box-shadow: 0 6px 20px var(--shadow-medium); /* NEW: Refined header shadow */
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000;
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping of logo/nav on smaller screens */
+    flex-wrap: wrap;
+    min-height: var(--header-height); /* Ensure header has a consistent height */
 }
 
 /* --- LOGO STYLES (UPDATED FOR IMAGE LOGO) --- */
-.logo {
-    margin-bottom: 0; /* Removed margin previously for tagline */
-}
-
-/* Flexbox container for the logo and icon */
 .logo a {
     display: flex; /* Makes the anchor a flex container */
     align-items: center; /* Vertically centers items */
-    gap: 10px; /* Space between the main logo and the icon */
-    text-decoration: none; /* Remove underline from the logo link */
+    gap: 15px; /* NEW: Increased space between the main logo and the icon */
+    text-decoration: none;
 }
 
 .main-logo-img {
-    max-height: 70px; /* Slightly reduced height for cleaner look */
-    width: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures proper display within its container */
+    max-height: 70px; /* NEW: Slightly adjusted height */
+    width: auto;
+    display: block;
 }
 
 .logo-icon-img {
@@ -133,248 +137,362 @@ section {
 }
 /* --- END LOGO STYLES --- */
 
+/* --- Mobile Navigation (Hamburger Menu) Styles --- */
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001; /* Above navbar when open */
+    margin-left: 20px; /* Space from logo */
+}
 
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color-light);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color-light);
+    position: absolute;
+    transition: transform 0.3s ease, top 0.3s ease;
+}
+
+.hamburger::before {
+    top: -10px;
+}
+
+.hamburger::after {
+    top: 10px;
+}
+
+/* Animation for 'X' shape */
+.menu-toggle.is-active .hamburger {
+    background-color: transparent; /* Hide middle line */
+}
+
+.menu-toggle.is-active .hamburger::before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.is-active .hamburger::after {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Regular Navbar (Desktop) */
 .navbar ul {
     list-style: none;
     display: flex;
+    margin: 0; /* Ensure no default margin */
 }
 
 .navbar ul li {
-    margin-left: 20px;
+    margin-left: 28px; /* NEW: Increased spacing between nav items */
 }
 
 .navbar ul li a {
     color: var(--text-color-light);
-    font-weight: 600; /* Slightly less bold */
-    padding: 5px 10px;
+    font-weight: 600;
+    padding: 10px 18px; /* NEW: More padding for clickability */
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Use primary color for hover */
     text-decoration: none;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/images/hero_background.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../assets/images/hero_background.jpg') no-repeat center center/cover; /* NEW: Darker overlay */
     color: #fff;
-    text-align: center; /* Ensures text is centered */
-    padding: 120px 20px; /* More vertical padding */
+    padding: 180px 20px; /* NEW: More vertical padding for grandeur */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    min-height: 500px; /* Ensure sufficient height */
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 25px var(--shadow-medium); /* Deeper shadow for hero */
+    align-items: center; /* This centers the .hero-content block itself */
+    min-height: 650px; /* NEW: Ensure sufficient height */
+    margin-bottom: 30px; /* Consistent spacing */
+    border-radius: 12px; /* Consistent rounded corners */
+    box-shadow: 0 15px 40px var(--shadow-medium); /* NEW: Deeper, more impactful shadow for hero */
+}
+
+/* Fix for text alignment within the hero section content */
+.hero-content {
+    text-align: center; /* Ensures all text content inside the hero-content div is centered */
+    max-width: 900px; /* Constrain content width for better readability on wide screens */
 }
 
 .hero-section h1 {
-    font-size: 4em; /* Larger, more impactful */
-    margin-bottom: 20px;
+    font-size: 5em; /* NEW: Larger, more impactful */
+    margin-bottom: 25px; /* More space below heading */
     color: #fff;
     font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* NEW: Stronger text shadow for readability */
 }
 
 .hero-section p {
-    font-size: 1.5em; /* Larger sub-text */
-    margin-bottom: 30px;
-    max-width: 800px;
+    font-size: 1.8em; /* NEW: Larger sub-text */
+    margin-bottom: 40px; /* More space before button */
+    /* max-width: 800px; - Removed, controlled by .hero-content max-width */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4); /* NEW: Stronger text shadow */
+    line-height: 1.5; /* NEW: Better line spacing */
 }
 
 .hero-section .btn {
-    display: inline-block; /* Essential for button-like behavior */
-    background-color: #007bff;
-    color: var(--text-color-light) !important; /* Ensure button text is white */
-    padding: 15px 35px; /* More generous padding */
-    border-radius: 50px; /* Pill shape */
-    font-size: 1.2em;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    background-color: var(--accent-color); /* UPDATED: Use NEW accent color for hero button */
+    color: var(--text-color-light) !important;
+    padding: 20px 50px; /* NEW: More generous padding */
+    border-radius: 50px;
+    font-size: 1.4em; /* NEW: Larger font size for button */
+    font-weight: 700; /* Bolder button text */
+    letter-spacing: 1px; /* NEW: Slightly increased letter spacing */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* NEW: Stronger button shadow */
 }
 
 .hero-section .btn:hover {
-    background-color: #0056b3;
+    background-color: var(--accent-color-hover); /* UPDATED: Darker accent on hover */
     text-decoration: none;
+    transform: translateY(-5px); /* NEW: More pronounced lift effect */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* NEW: Deeper shadow on hover */
 }
 
 /* Programs, Faculties, Institutions, Tests Sections - Grid/Flex Layouts */
 .programs-grid, .faculty-grid, .institutions-grid, .tests-list {
     display: grid;
-    gap: 30px;
-    margin-top: 30px;
+    gap: 35px; /* NEW: Consistent, slightly larger gap */
+    margin-top: 50px; /* NEW: More space below section title */
 }
 
 .programs-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger min-width */
 }
 
 .faculty-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .institutions-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 30px; /* More padding */
+    background-color: var(--background-card);
+    border: none; /* Removed border, relying on shadow */
+    border-radius: 12px; /* Consistent rounded corners */
+    padding: 35px; /* NEW: More internal padding */
     text-align: center;
-    box-shadow: 0 3px 10px var(--shadow-light);
+    box-shadow: 0 6px 25px var(--shadow-light); /* NEW: Refined card shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* For flexible content inside cards */
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes content to top/bottom if height varies */
+    justify-content: space-between;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px var(--shadow-medium);
+    transform: translateY(-10px); /* NEW: More pronounced lift */
+    box-shadow: 0 15px 35px var(--shadow-medium); /* NEW: Deeper shadow on hover */
 }
 
 .card h3 {
     color: var(--primary-color);
-    font-size: 1.7em;
-    margin-bottom: 10px;
+    font-size: 1.9em; /* NEW: Slightly larger */
+    margin-bottom: 15px; /* NEW: More space below title */
 }
 
 .card p {
-    font-size: 1.1em;
+    font-size: 1.15em; /* NEW: Slightly larger font */
     color: #555;
+    line-height: 1.6; /* NEW: Better line spacing */
 }
 
 /* Faculty Specific Styles */
 .faculty-card {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .faculty-card img {
-    width: 150px;
-    height: 150px;
+    width: 180px; /* NEW: Slightly larger image */
+    height: 180px;
     border-radius: 50%;
-    object-fit: cover; /* Ensures image covers the area */
-    margin-bottom: 20px;
-    border: 3px solid #007bff;
+    object-fit: cover;
+    margin-bottom: 30px; /* NEW: More space */
+    border: 6px solid var(--primary-color); /* NEW: Thicker, primary colored border */
+    box-shadow: 0 0 0 10px rgba(0,123,255,0.15); /* NEW: Subtle outer glow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faculty-card img:hover {
+    border-color: var(--accent-color); /* UPDATED: Change border color on hover to new accent */
+    box-shadow: 0 0 0 10px rgba(39,174,96,0.25); /* NEW: Accent glow on hover */
 }
 
 .faculty-card h3 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.8em; /* NEW: Slightly larger */
 }
 
 .faculty-card .designation {
     font-style: italic;
     color: #777;
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* NEW: More space */
+    font-size: 1.05em; /* NEW: Slightly larger */
+}
+
+.faculty-card h4 {
+    color: var(--secondary-color);
+    margin-top: 20px; /* NEW: More top margin */
+    margin-bottom: 12px; /* NEW: More bottom margin */
+    font-size: 1.3em; /* NEW: Larger font */
+    font-weight: 600;
 }
 
 .faculty-card ul {
     list-style: none;
     text-align: left;
     width: 100%;
+    padding: 0 15px; /* NEW: Padding for list within card */
 }
 
 .faculty-card ul li {
-    background-color: var(--background-light); /* Lighter background for list items */
-    border-left: 3px solid var(--primary-color);
-    padding: 8px 15px;
-    margin-bottom: 8px;
-    border-radius: 4px;
-    font-size: 0.95em;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow on list items */
+    background-color: var(--background-light);
+    border-left: 5px solid var(--primary-color); /* NEW: Thicker border */
+    padding: 12px 22px; /* NEW: More padding */
+    margin-bottom: 12px; /* NEW: More space */
+    border-radius: 8px; /* NEW: More rounded corners */
+    font-size: 1.05em; /* NEW: Slightly larger font */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.faculty-card ul li:hover {
+    background-color: #EBF2F7; /* NEW: Slightly darker on hover */
+    border-color: var(--accent-color); /* UPDATED: Accent color on hover */
 }
 
 /* Institution Specific Styles */
 .institution-card img {
     max-width: 100%;
-    height: 200px;
+    height: 250px; /* NEW: Taller image for greater impact */
     object-fit: cover;
-    border-radius: 5px; /* Slightly smaller radius for image within card */
-    margin-bottom: 15px;
+    border-radius: 10px; /* Consistent rounded corners */
+    margin-bottom: 25px; /* NEW: More space */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15); /* NEW: Image specific shadow */
 }
 
 .institution-card h3 {
-    font-size: 1.8em;
-    margin-bottom: 5px;
+    font-size: 2.2em; /* NEW: Larger institution name */
+    margin-bottom: 10px;
 }
 
 .institution-card .city {
     color: #666;
-    font-size: 1em;
-    margin-bottom: 10px;
+    font-size: 1.15em; /* NEW: Slightly larger */
+    margin-bottom: 18px; /* NEW: More space */
 }
 
 .institution-card p {
-    font-size: 1em;
+    font-size: 1.1em; /* NEW: Slightly larger */
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 25px; /* NEW: More space before button */
+    line-height: 1.5;
 }
 
 .institution-card a {
-    display: inline-block; /* Essential for button-like behavior */
-    background-color: var(--accent-color);
-    color: var(--text-color-light);
-    padding: 12px 25px; /* More padding */
-    border-radius: 50px; /* Pill shape */
-    font-size: 1em; /* Slightly larger font */
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    background-color: var(--accent-color); /* UPDATED: Use NEW accent color */
+    color: var(--text-color-light) !important; /* Ensure text is light */
+    padding: 16px 35px; /* NEW: More padding */
+    border-radius: 50px;
+    font-size: 1.2em; /* NEW: Slightly larger font */
+    font-weight: 700; /* Bolder font */
+    letter-spacing: 0.7px; /* NEW: Slightly increased letter spacing */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* NEW: Stronger button shadow */
 }
 
 .institution-card a:hover {
-    background-color: #218838;
+    background-color: var(--accent-color-hover); /* UPDATED: Darker accent on hover */
     text-decoration: none;
+    transform: translateY(-3px); /* NEW: Subtle lift */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
 /* Tests Section */
 .tests-list {
-    display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px; /* NEW: More space between test items */
 }
 
 .test-item {
-    background-color: var(--background-card); /* Ensure consistency */
-    border: 1px solid #eee;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background-color: var(--background-card);
+    border: none; /* Removed border */
+    padding: 30px; /* NEW: More padding */
+    border-radius: 10px; /* Consistent rounded corners */
+    box-shadow: 0 5px 18px var(--shadow-light); /* NEW: Softer initial shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.test-item:hover {
+    transform: translateY(-8px); /* NEW: More pronounced lift */
+    box-shadow: 0 12px 30px var(--shadow-medium); /* NEW: Deeper shadow */
 }
 
 .test-item h3 {
     color: var(--primary-color);
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.9em; /* NEW: Slightly larger */
+    margin-bottom: 15px;
 }
 
 .test-item p {
-    font-size: 1.1em;
-    margin-bottom: 8px;
+    font-size: 1.15em; /* NEW: Slightly larger */
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
 
 .test-item p strong {
-    color: #333;
+    color: var(--secondary-color); /* Stronger color for labels */
 }
 
-
 /* General Page Layout - ensures footer is pushed to bottom */
-
 main {
     flex: 1; /* Pushes footer to the bottom on pages with less content */
 }
 
 /* Contact Section */
 .contact-section {
-    background-color: var(--background-card); /* Consistent background */
+    background-color: var(--background-card);
     text-align: center;
 }
+
+.contact-section h2 {
+    margin-top: 0; /* Remove top margin for this specific instance if at top of section */
+    padding-bottom: 10px;
+}
+.contact-section h2::after {
+    bottom: 5px; /* Adjust underline position for this h2 */
+}
+
+.contact-section p {
+    font-size: 1.3em; /* NEW: Slightly larger */
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
 
 /* For specific pages, adjust padding/margin */
 #programs-page,
@@ -382,26 +500,22 @@ main {
 #institutions-page,
 #tests-page,
 #contact-page { /* All full-page sections */
-    padding-top: 40px; /* More consistent padding */
-    padding-bottom: 60px;
-    margin-top: 0; /* Remove top margin from default section */
-    box-shadow: none; /* Remove shadow if desired for full width pages */
-    border-radius: 0;
+    padding-top: 70px; /* NEW: Consistent top padding */
+    padding-bottom: 90px; /* NEW: Consistent bottom padding */
+    margin-top: 0;
+    margin-bottom: 0; /* These are meant to be full-width, no external margin */
+    border-radius: 0; /* No border-radius for full-width sections */
+    box-shadow: none; /* No shadow for full-width sections */
 }
-
-.contact-section p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
 
 /* Footer */
 .footer {
     background-color: var(--secondary-color);
     color: var(--text-color-light);
     text-align: center;
-    padding: 20px 0;
-    margin-top: auto; /* Pushes footer to the bottom */
+    padding: 30px 0; /* NEW: More padding */
+    margin-top: auto;
+    font-size: 1em; /* NEW: Slightly larger font */
 }
 
 /* Placeholder for images */
@@ -412,83 +526,324 @@ img {
 }
 
 /* Responsive Adjustments */
-/* Tablet and smaller screens */
+/* Tablet and smaller screens (769px to 992px) */
 @media (max-width: 992px) {
     .container {
-        padding: 15px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2.8em;
+        padding-bottom: 15px;
+    }
+    h2::after {
+        width: 100px;
+        height: 5px;
+    }
+
+    .navbar ul li {
+        margin-left: 20px;
+    }
+
+    .hero-section {
+        padding: 120px 20px;
+        min-height: 550px;
+    }
+    .hero-section h1 {
+        font-size: 4em;
+    }
+    .hero-section p {
+        font-size: 1.5em;
+    }
+    .hero-section .btn {
+        padding: 18px 40px;
+        font-size: 1.3em;
+    }
+
+    section {
+        padding: 60px 0;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+    .card h3 {
+        font-size: 1.7em;
+    }
+
+    .faculty-card img {
+        width: 150px;
+        height: 150px;
+        border: 5px solid var(--primary-color);
+        box-shadow: 0 0 0 8px rgba(0,123,255,0.15);
+    }
+    .faculty-card ul li {
+        padding: 10px 20px;
+    }
+
+    .institution-card img {
+        height: 220px;
+    }
+    .institution-card h3 {
+        font-size: 2em;
+    }
+    .institution-card a {
+        padding: 14px 30px;
+        font-size: 1.1em;
+    }
+
+    .test-item {
+        padding: 25px;
+    }
+    .test-item h3 {
+        font-size: 1.7em;
+    }
+    .test-item p {
+        font-size: 1.1em;
+    }
+
+    .contact-section p {
+        font-size: 1.2em;
+    }
+}
+
+/* Mobile and smaller screens (up to 768px) */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 90px; /* Slightly smaller header on very small screens */
+    }
+
+    .header .container {
+        flex-direction: row; /* Keep logo and toggle side-by-side */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px; /* Adjust padding for mobile header */
+        flex-wrap: nowrap; /* Prevent wrapping of header elements */
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+    .logo a {
+        flex-direction: row; /* Keep logo elements in a row on mobile */
+        gap: 10px;
+    }
+    .main-logo-img,
+    .logo-icon-img {
+        max-height: 50px; /* Adjusted size for smaller screens */
+    }
+
+    /* Show hamburger menu toggle on mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide regular navigation on mobile */
+    .navbar {
+        display: none;
+        position: fixed; /* Use fixed for full screen overlay */
+        top: var(--header-height); /* Position below header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--header-height)); /* Full viewport height minus header */
+        background-color: var(--secondary-color);
+        overflow-y: auto; /* Enable scrolling if menu items exceed height */
+        z-index: 999; /* Below toggle, above content */
+        transition: transform 0.3s ease-out;
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+
+    /* Show navigation when .nav-open class is on body */
+    body.nav-open .navbar {
+        display: block;
+        transform: translateX(0); /* Slide into view */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 30px 0; /* More padding for mobile menu items */
+        align-items: center;
+        width: 100%;
+    }
+    .navbar ul li {
+        margin: 0; /* Remove horizontal margin */
+        width: 100%; /* Make list items full width */
+    }
+    .navbar ul li a {
+        display: block; /* Make links block level to fill li */
+        padding: 18px 20px; /* Larger tappable area */
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtle separators */
+    }
+    .navbar ul li:last-child a {
+        border-bottom: none;
+    }
+    .navbar ul li a:hover {
+        background-color: rgba(0,0,0,0.1); /* Lighter hover for menu */
     }
 
     h2 {
         font-size: 2.2em;
+        margin-top: 40px;
+        padding-bottom: 12px;
     }
     h2::after {
-        width: 60px;
-    }
-
-    .navbar ul li {
-        margin-left: 15px;
+        width: 80px;
+        height: 4px;
     }
 
     .hero-section {
-        padding: 80px 15px;
-        min-height: 450px;
+        padding: 100px 15px;
+        min-height: 500px;
     }
     .hero-section h1 {
-        font-size: 3em;
+        font-size: 3.5em;
+        margin-bottom: 20px;
     }
     .hero-section p {
+        font-size: 1.4em;
+        margin-bottom: 30px;
+        max-width: 90%; /* Adjust max-width for smaller screens */
+    }
+    .hero-section .btn {
+        padding: 15px 35px;
         font-size: 1.2em;
+    }
+
+    section {
+        padding: 50px 0; /* Reduced padding for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .faculty-card img {
+        width: 130px;
+        height: 130px;
+        border: 4px solid var(--primary-color);
+        box-shadow: 0 0 0 6px rgba(0,123,255,0.15);
+    }
+    .faculty-card h3 {
+        font-size: 1.6em;
+    }
+    .faculty-card h4 {
+        font-size: 1.2em;
+    }
+    .faculty-card ul li {
+        font-size: 1em;
+        padding: 10px 18px;
+    }
+
+    .institution-card img {
+        height: 200px;
+    }
+    .institution-card h3 {
+        font-size: 1.8em;
+    }
+    .institution-card p {
+        font-size: 1em;
+    }
+
+    .test-item {
+        padding: 20px;
+    }
+    .test-item h3 {
+        font-size: 1.6em;
+    }
+    .test-item p {
+        font-size: 1.05em;
+    }
+
+    .contact-section p {
+        font-size: 1.15em;
+    }
+}
+
+/* Extra small devices (less than 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.8em;
+    }
+    h2 {
+        font-size: 2em;
+        margin-top: 30px;
+    }
+    h2::after {
+        width: 60px;
+        height: 3px;
+    }
+
+    .hero-section {
+        padding: 80px 10px;
+        min-height: 400px;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .hero-section p {
+        font-size: 1.1em;
+        margin-bottom: 25px;
+        max-width: 95%;
+    }
+    .hero-section .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    section {
+        padding: 40px 0;
+        margin-bottom: 15px;
     }
 
     .card {
         padding: 20px;
     }
     .card h3 {
+        font-size: 1.4em;
+    }
+    .card p {
+        font-size: 1em;
+    }
+
+    .faculty-card img {
+        width: 100px;
+        height: 100px;
+        border: 3px solid var(--primary-color);
+        box-shadow: 0 0 0 5px rgba(0,123,255,0.1);
+    }
+    .faculty-card h3 {
+        font-size: 1.4em;
+    }
+    .faculty-card ul li {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .institution-card img {
+        height: 160px;
+    }
+    .institution-card h3 {
         font-size: 1.5em;
     }
-}
-
-/* Mobile and smaller screens */
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        text-align: center;
+    .institution-card a {
+        padding: 10px 20px;
+        font-size: 0.95em;
     }
 
-    .logo {
-        margin-bottom: 10px;
+    .test-item {
+        padding: 15px;
+    }
+    .test-item h3 {
+        font-size: 1.4em;
+    }
+    .test-item p {
+        font-size: 0.95em;
     }
 
-    .logo a {
-        flex-direction: column; /* Stack logo elements vertically on small screens */
-        gap: 5px; /* Reduce gap */
-    }
-    .main-logo-img,
-    .logo-icon-img {
-        max-height: 50px; 
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-    .navbar ul li {
-        margin: 0 0 10px 0; /* No left margin, add bottom margin */
-    }
-    .navbar ul li:last-child {
-        margin-bottom: 0;
-    }
-
-    h2 {
-        font-size: 1.8em;
-        margin-top: 30px;
-    }
-
-    .hero-section {
-        padding: 60px 15px;
-        min-height: 350px;
-    }
-    .hero-section h1 {
-        font-size: 2.5em;
+    .contact-section p {
+        font-size: 1em;
     }
 }

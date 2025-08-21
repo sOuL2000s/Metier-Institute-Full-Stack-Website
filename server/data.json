@@ -73,7 +73,8 @@
       "image": "/assets/images/nmims.jpg",
       "link": "https://www.nmims.edu/"
     }
-  ],
+  ]
+  ,
   "tests": [
     {
       "id": 1,
