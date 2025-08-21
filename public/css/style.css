@@ -5,34 +5,43 @@
     box-sizing: border-box;
 }
 
-/* Color Palette Variables - Updated for more vibrancy and professionalism */
+/* Color Palette Variables - Deeper Refinement */
 :root {
-    --primary-color: #007BFF; /* A vibrant, standard blue for brand elements and links */
-    --secondary-color: #2A3B4D; /* Deep sophisticated blue-grey for headers, footers */
-    --accent-color: #27AE60; /* NEW: Lively Emerald Green for calls to action, highlights */
-    --accent-color-hover: #219150; /* NEW: Darker shade of Emerald Green for hover */
-    --text-color-dark: #333333;
-    --text-color-light: #F9F9F9;
-    --background-light: #F8F9FA; /* NEW: Even lighter, subtle off-white background for main body */
-    --background-card: #FFFFFF;
-    --border-color: #E0E6EB; /* Light grey border, softer */
-    --shadow-light: rgba(0, 0, 0, 0.08); /* NEW: Softer initial shadow for cards */
-    --shadow-medium: rgba(0, 0, 0, 0.2); /* NEW: More pronounced shadow for hero/header on hover */
+    --primary-dark-blue: #0B2042; /* Slightly darker, deeper blue for gravitas */
+    --primary-blue: #2E7BBF;    /* Inviting, mid-tone blue */
+    --secondary-blue-light: #EBF2F7; /* NEW: Very light blue for subtle section backgrounds */
+    --accent-orange: #FF7F00;   /* Vibrant, warm orange */
+    --accent-orange-hover: #E56F00; /* Slightly different hover for orange */
 
-    --header-height: 106px; /* NEW: Define header height for mobile menu positioning */
+    --light-grey-bg: #F7F9FC;   /* Even softer, cooler off-white background */
+    --white-card: #FFFFFF;      /* Pure white for content cards */
+
+    --text-dark: #2C3E50;       /* More sophisticated dark grey for main text */
+    --text-medium: #6A7B8C;     /* Softer medium grey for secondary text */
+    --text-light: #F8F8F8;      /* Near white for text on dark backgrounds */
+
+    --border-subtle: #DCDCDC;    /* NEW: A very subtle light grey border color */
+
+    /* Enhanced Shadow System for More Depth */
+    --shadow-soft: rgba(0, 0, 0, 0.04);  /* Very light, diffused */
+    --shadow-elevated: rgba(0, 0, 0, 0.1);  /* More distinct, but still soft */
+    --shadow-deep: rgba(0, 0, 0, 0.2); /* Pronounced for strong elevation */
+
+    --header-height: 95px; /* Adjusted for better proportion */
 }
 
 body {
-    font-family: 'Open Sans', sans-serif; /* Modern, readable body font */
-    line-height: 1.6;
-    color: var(--text-color-dark);
-    background-color: var(--background-light);
-    display: flex; /* For sticky footer */
-    flex-direction: column; /* For sticky footer */
-    min-height: 100vh; /* For sticky footer */
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7; /* Increased for better readability */
+    color: var(--text-dark);
+    background-color: var(--light-grey-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-/* NEW: Prevents scrolling when mobile menu is open */
 body.nav-open {
     overflow: hidden;
 }
@@ -40,33 +49,35 @@ body.nav-open {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 25px; /* NEW: Consistent, more generous padding */
+    padding: 0 25px; /* Consistent horizontal padding */
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--primary-blue);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
-    color: var(--secondary-color);
+    color: var(--primary-dark-blue);
 }
 
-h1, h2, h3, h4 { /* Added h4 to ensure consistent font */
-    font-family: 'Montserrat', sans-serif; /* Bold, modern headings */
-    color: var(--secondary-color);
-    margin-bottom: 20px; /* NEW: Increased bottom margin for headings */
-    font-weight: 700; /* Ensure headings are bold */
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-dark-blue);
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px; /* Subtle letter spacing for headings */
 }
 
 h2 {
     text-align: center;
-    margin-top: 50px; /* NEW: More top margin for sections */
-    font-size: 3.5em; /* NEW: Larger and more impactful */
+    margin-top: 60px; /* Increased top margin for sections */
+    font-size: 3.4em; /* Slightly larger and more impactful */
     position: relative;
-    padding-bottom: 20px; /* NEW: Increased padding for more prominent underline */
+    padding-bottom: 22px; /* Increased padding for prominent underline */
 }
 
 h2::after {
@@ -75,27 +86,28 @@ h2::after {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 120px; /* NEW: Wider underline */
-    height: 6px; /* NEW: Thicker underline */
-    background-color: var(--primary-color); /* Use primary color */
-    border-radius: 3px; /* Half of height for rounded caps */
+    width: 110px; /* Wider underline */
+    height: 6px; /* Thicker underline */
+    background-color: var(--primary-blue);
+    border-radius: 3px;
 }
 
 section {
-    padding: 80px 0; /* NEW: More vertical padding for sections */
-    background-color: var(--background-card);
-    margin-bottom: 30px; /* NEW: More space between sections */
-    border-radius: 12px; /* NEW: Slightly more rounded corners */
-    box-shadow: 0 8px 30px var(--shadow-light); /* NEW: Softer, more modern initial shadow */
-    transition: all 0.4s ease; /* Smoother transitions for hover effects */
+    padding: 80px 0; /* More vertical padding for sections */
+    background-color: var(--white-card);
+    margin-bottom: 35px; /* More space between sections */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px var(--shadow-soft); /* Softer initial shadow */
+    transition: all 0.4s ease;
+    border: 1px solid var(--border-subtle); /* NEW: Subtle border for definition */
 }
 
 /* Header */
 .header {
-    background-color: var(--secondary-color);
-    color: var(--text-color-light);
-    padding: 18px 0; /* NEW: Slightly increased vertical padding for sleekness */
-    box-shadow: 0 6px 20px var(--shadow-medium); /* NEW: Refined header shadow */
+    background-color: var(--primary-dark-blue);
+    color: var(--text-light);
+    padding: 15px 0;
+    box-shadow: 0 8px 25px var(--shadow-deep); /* Deeper header shadow */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -106,38 +118,38 @@ section {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    min-height: var(--header-height); /* Ensure header has a consistent height */
+    min-height: var(--header-height);
 }
 
-/* --- LOGO STYLES (UPDATED FOR IMAGE LOGO) --- */
+/* --- LOGO STYLES --- */
 .logo a {
-    display: flex; /* Makes the anchor a flex container */
-    align-items: center; /* Vertically centers items */
-    gap: 15px; /* NEW: Increased space between the main logo and the icon */
+    display: flex;
+    align-items: center;
+    gap: 15px;
     text-decoration: none;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animation for logo */
+}
+
+.logo a:hover {
+    transform: scale(1.02);
+    filter: brightness(1.2);
 }
 
 .main-logo-img {
-    max-height: 70px; /* NEW: Slightly adjusted height */
+    max-height: 70px;
     width: auto;
     display: block;
 }
 
 .logo-icon-img {
-    max-height: 70px; /* Consistent with main logo */
+    max-height: 65px;
     width: auto;
     display: block;
-}
-
-/* Hide the old text-based logo elements */
-.logo-main,
-.logo-main::after,
-.logo-tagline {
-    display: none;
 }
 /* --- END LOGO STYLES --- */
 
 /* --- Mobile Navigation (Hamburger Menu) Styles --- */
+/* Default (Desktop) State */
 .menu-toggle {
     display: none; /* Hidden by default on larger screens */
     background: none;
@@ -145,15 +157,15 @@ section {
     cursor: pointer;
     padding: 10px;
     position: relative;
-    z-index: 1001; /* Above navbar when open */
-    margin-left: 20px; /* Space from logo */
+    z-index: 1001;
+    margin-left: 20px;
 }
 
 .hamburger {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: var(--text-color-light);
+    background-color: var(--text-light);
     position: relative;
     transition: background-color 0.3s ease;
 }
@@ -164,7 +176,7 @@ section {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: var(--text-color-light);
+    background-color: var(--text-light);
     position: absolute;
     transition: transform 0.3s ease, top 0.3s ease;
 }
@@ -179,7 +191,7 @@ section {
 
 /* Animation for 'X' shape */
 .menu-toggle.is-active .hamburger {
-    background-color: transparent; /* Hide middle line */
+    background-color: transparent;
 }
 
 .menu-toggle.is-active .hamburger::before {
@@ -194,92 +206,114 @@ section {
 .navbar ul {
     list-style: none;
     display: flex;
-    margin: 0; /* Ensure no default margin */
+    margin: 0;
 }
 
 .navbar ul li {
-    margin-left: 28px; /* NEW: Increased spacing between nav items */
+    margin-left: 35px; /* Increased spacing between nav items */
 }
 
 .navbar ul li a {
-    color: var(--text-color-light);
+    color: var(--text-light);
     font-weight: 600;
-    padding: 10px 18px; /* NEW: More padding for clickability */
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 0; /* Adjusted padding for underline effect */
+    position: relative; /* For ::after underline */
+    transition: color 0.3s ease;
+}
+
+/* Underline animation for nav links */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Position below text */
+    left: 0;
+    width: 0; /* Start hidden */
+    height: 3px;
+    background-color: var(--accent-orange); /* Use accent color for underline */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after { /* Add 'active' class to current page link via JS if needed */
+    width: 100%; /* Expand on hover/active */
 }
 
 .navbar ul li a:hover {
-    background-color: var(--primary-color); /* Use primary color for hover */
+    color: var(--accent-orange); /* Change text color on hover */
     text-decoration: none;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../assets/images/hero_background.jpg') no-repeat center center/cover; /* NEW: Darker overlay */
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../assets/images/hero_background.jpg') no-repeat center center/cover;
     color: #fff;
-    padding: 180px 20px; /* NEW: More vertical padding for grandeur */
+    padding: 180px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* This centers the .hero-content block itself */
-    min-height: 650px; /* NEW: Ensure sufficient height */
-    margin-bottom: 30px; /* Consistent spacing */
-    border-radius: 12px; /* Consistent rounded corners */
-    box-shadow: 0 15px 40px var(--shadow-medium); /* NEW: Deeper, more impactful shadow for hero */
+    align-items: center;
+    min-height: 700px; /* Slightly increased height */
+    margin-bottom: 35px;
+    border-radius: 15px;
+    box-shadow: 0 18px 45px var(--shadow-deep); /* Deeper, more impactful shadow */
+    text-align: center;
+    border: 1px solid var(--border-subtle); /* Subtle border for definition */
 }
 
-/* Fix for text alignment within the hero section content */
 .hero-content {
-    text-align: center; /* Ensures all text content inside the hero-content div is centered */
-    max-width: 900px; /* Constrain content width for better readability on wide screens */
+    max-width: 950px; /* Slightly increased max-width */
 }
 
 .hero-section h1 {
-    font-size: 5em; /* NEW: Larger, more impactful */
-    margin-bottom: 25px; /* More space below heading */
+    font-size: 5.2em; /* Slightly larger */
+    margin-bottom: 28px;
     color: #fff;
     font-weight: 700;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* NEW: Stronger text shadow for readability */
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.7); /* Stronger text shadow */
+    letter-spacing: 1px; /* Subtle letter spacing for hero title */
 }
 
 .hero-section p {
-    font-size: 1.8em; /* NEW: Larger sub-text */
-    margin-bottom: 40px; /* More space before button */
-    /* max-width: 800px; - Removed, controlled by .hero-content max-width */
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.4); /* NEW: Stronger text shadow */
-    line-height: 1.5; /* NEW: Better line spacing */
+    font-size: 1.9em; /* Slightly larger sub-text */
+    margin-bottom: 45px; /* More space before button */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    line-height: 1.6;
+    letter-spacing: 0.2px; /* Subtle letter spacing */
 }
 
 .hero-section .btn {
     display: inline-block;
-    background-color: var(--accent-color); /* UPDATED: Use NEW accent color for hero button */
-    color: var(--text-color-light) !important;
-    padding: 20px 50px; /* NEW: More generous padding */
+    background-color: var(--accent-orange);
+    color: var(--text-light) !important;
+    padding: 22px 55px; /* More generous padding */
     border-radius: 50px;
-    font-size: 1.4em; /* NEW: Larger font size for button */
-    font-weight: 700; /* Bolder button text */
-    letter-spacing: 1px; /* NEW: Slightly increased letter spacing */
+    font-size: 1.5em; /* Larger font size for button */
+    font-weight: 700;
+    letter-spacing: 1.5px; /* Increased letter spacing */
+    text-transform: uppercase; /* NEW: Uppercase text for strong CTA */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* NEW: Stronger button shadow */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35); /* Stronger button shadow */
+    outline: none; /* Remove default outline on focus */
 }
 
 .hero-section .btn:hover {
-    background-color: var(--accent-color-hover); /* UPDATED: Darker accent on hover */
+    background-color: var(--accent-orange-hover);
     text-decoration: none;
-    transform: translateY(-5px); /* NEW: More pronounced lift effect */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* NEW: Deeper shadow on hover */
+    transform: translateY(-10px); /* More pronounced lift effect */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5); /* Deeper shadow on hover */
 }
 
 /* Programs, Faculties, Institutions, Tests Sections - Grid/Flex Layouts */
 .programs-grid, .faculty-grid, .institutions-grid, .tests-list {
     display: grid;
-    gap: 35px; /* NEW: Consistent, slightly larger gap */
-    margin-top: 50px; /* NEW: More space below section title */
+    gap: 40px;
+    margin-top: 55px; /* More space below section title */
+    padding: 0 25px; /* Ensure grid items don't touch container edges */
 }
 
 .programs-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger min-width */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .faculty-grid {
@@ -291,33 +325,34 @@ section {
 }
 
 .card {
-    background-color: var(--background-card);
-    border: none; /* Removed border, relying on shadow */
-    border-radius: 12px; /* Consistent rounded corners */
-    padding: 35px; /* NEW: More internal padding */
+    background-color: var(--white-card);
+    border: 1px solid var(--border-subtle); /* NEW: Subtle border */
+    border-radius: 15px;
+    padding: 38px; /* More internal padding */
     text-align: center;
-    box-shadow: 0 6px 25px var(--shadow-light); /* NEW: Refined card shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px var(--shadow-soft), 0 2px 8px var(--shadow-soft); /* Layered shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .card:hover {
-    transform: translateY(-10px); /* NEW: More pronounced lift */
-    box-shadow: 0 15px 35px var(--shadow-medium); /* NEW: Deeper shadow on hover */
+    transform: translateY(-12px); /* More pronounced lift */
+    box-shadow: 0 15px 40px var(--shadow-elevated), 0 5px 15px var(--shadow-elevated); /* Deeper layered shadow on hover */
+    border-color: var(--primary-blue); /* Highlight border on hover */
 }
 
 .card h3 {
-    color: var(--primary-color);
-    font-size: 1.9em; /* NEW: Slightly larger */
-    margin-bottom: 15px; /* NEW: More space below title */
+    color: var(--primary-blue);
+    font-size: 2.1em; /* Slightly larger */
+    margin-bottom: 20px;
 }
 
 .card p {
-    font-size: 1.15em; /* NEW: Slightly larger font */
-    color: #555;
-    line-height: 1.6; /* NEW: Better line spacing */
+    font-size: 1.18em; /* Slightly larger font */
+    color: var(--text-medium);
+    line-height: 1.7;
 }
 
 /* Faculty Specific Styles */
@@ -326,38 +361,39 @@ section {
 }
 
 .faculty-card img {
-    width: 180px; /* NEW: Slightly larger image */
+    width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 30px; /* NEW: More space */
-    border: 6px solid var(--primary-color); /* NEW: Thicker, primary colored border */
-    box-shadow: 0 0 0 10px rgba(0,123,255,0.15); /* NEW: Subtle outer glow */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    border: 6px solid var(--primary-blue);
+    box-shadow: 0 0 0 10px rgba(46,123,191,0.15);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Add transform transition */
 }
 
 .faculty-card img:hover {
-    border-color: var(--accent-color); /* UPDATED: Change border color on hover to new accent */
-    box-shadow: 0 0 0 10px rgba(39,174,96,0.25); /* NEW: Accent glow on hover */
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 0 10px rgba(255,127,0,0.25);
+    transform: scale(1.03); /* Subtle scale on hover */
 }
 
 .faculty-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.8em; /* NEW: Slightly larger */
+    margin-bottom: 12px;
+    font-size: 2em;
 }
 
 .faculty-card .designation {
     font-style: italic;
-    color: #777;
-    margin-bottom: 20px; /* NEW: More space */
-    font-size: 1.05em; /* NEW: Slightly larger */
+    color: var(--text-medium);
+    margin-bottom: 28px;
+    font-size: 1.15em;
 }
 
 .faculty-card h4 {
-    color: var(--secondary-color);
-    margin-top: 20px; /* NEW: More top margin */
-    margin-bottom: 12px; /* NEW: More bottom margin */
-    font-size: 1.3em; /* NEW: Larger font */
+    color: var(--primary-dark-blue);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.45em;
     font-weight: 600;
 }
 
@@ -365,132 +401,147 @@ section {
     list-style: none;
     text-align: left;
     width: 100%;
-    padding: 0 15px; /* NEW: Padding for list within card */
+    padding: 0 20px;
 }
 
 .faculty-card ul li {
-    background-color: var(--background-light);
-    border-left: 5px solid var(--primary-color); /* NEW: Thicker border */
-    padding: 12px 22px; /* NEW: More padding */
-    margin-bottom: 12px; /* NEW: More space */
-    border-radius: 8px; /* NEW: More rounded corners */
-    font-size: 1.05em; /* NEW: Slightly larger font */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: var(--secondary-blue-light); /* Lighter blue for list items */
+    border-left: 5px solid var(--primary-blue);
+    padding: 14px 25px; /* More padding */
+    margin-bottom: 14px; /* More space */
+    border-radius: 8px;
+    font-size: 1.1em; /* Slightly larger font */
+    box-shadow: 0 2px 6px var(--shadow-soft);
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .faculty-card ul li:hover {
-    background-color: #EBF2F7; /* NEW: Slightly darker on hover */
-    border-color: var(--accent-color); /* UPDATED: Accent color on hover */
+    background-color: #DAE7F0; /* Slightly darker on hover */
+    border-color: var(--accent-orange);
 }
 
 /* Institution Specific Styles */
 .institution-card img {
     max-width: 100%;
-    height: 250px; /* NEW: Taller image for greater impact */
+    height: 260px; /* Taller image for greater impact */
     object-fit: cover;
-    border-radius: 10px; /* Consistent rounded corners */
-    margin-bottom: 25px; /* NEW: More space */
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15); /* NEW: Image specific shadow */
+    border-radius: 10px;
+    margin-bottom: 28px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.18); /* Image specific shadow */
+    filter: grayscale(80%); /* NEW: Grayscale by default */
+    transition: filter 0.4s ease; /* Transition for grayscale */
+}
+
+.institution-card img:hover {
+    filter: grayscale(0%); /* Full color on hover */
 }
 
 .institution-card h3 {
-    font-size: 2.2em; /* NEW: Larger institution name */
-    margin-bottom: 10px;
+    font-size: 2.4em; /* Larger institution name */
+    margin-bottom: 12px;
 }
 
 .institution-card .city {
-    color: #666;
-    font-size: 1.15em; /* NEW: Slightly larger */
-    margin-bottom: 18px; /* NEW: More space */
+    color: var(--text-medium);
+    font-size: 1.25em; /* Slightly larger */
+    margin-bottom: 20px;
 }
 
 .institution-card p {
-    font-size: 1.1em; /* NEW: Slightly larger */
-    color: #555;
-    margin-bottom: 25px; /* NEW: More space before button */
-    line-height: 1.5;
+    font-size: 1.15em;
+    color: var(--text-medium);
+    margin-bottom: 30px; /* More space before button */
+    line-height: 1.6;
 }
 
 .institution-card a {
     display: inline-block;
-    background-color: var(--accent-color); /* UPDATED: Use NEW accent color */
-    color: var(--text-color-light) !important; /* Ensure text is light */
-    padding: 16px 35px; /* NEW: More padding */
+    background-color: var(--accent-orange);
+    color: var(--text-light) !important;
+    padding: 18px 40px; /* More padding */
     border-radius: 50px;
-    font-size: 1.2em; /* NEW: Slightly larger font */
-    font-weight: 700; /* Bolder font */
-    letter-spacing: 0.7px; /* NEW: Slightly increased letter spacing */
+    font-size: 1.25em; /* Slightly larger font */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* NEW: Uppercase for consistency */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* NEW: Stronger button shadow */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
 .institution-card a:hover {
-    background-color: var(--accent-color-hover); /* UPDATED: Darker accent on hover */
+    background-color: var(--accent-orange-hover);
     text-decoration: none;
-    transform: translateY(-3px); /* NEW: Subtle lift */
-    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
 }
 
 /* Tests Section */
 .tests-list {
     flex-direction: column;
-    gap: 30px; /* NEW: More space between test items */
+    gap: 35px; /* More space between test items */
 }
 
 .test-item {
-    background-color: var(--background-card);
-    border: none; /* Removed border */
-    padding: 30px; /* NEW: More padding */
-    border-radius: 10px; /* Consistent rounded corners */
-    box-shadow: 0 5px 18px var(--shadow-light); /* NEW: Softer initial shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--white-card);
+    border: 1px solid var(--border-subtle); /* Subtle border */
+    padding: 35px; /* More padding */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .test-item:hover {
-    transform: translateY(-8px); /* NEW: More pronounced lift */
-    box-shadow: 0 12px 30px var(--shadow-medium); /* NEW: Deeper shadow */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px var(--shadow-elevated);
+    border-color: var(--primary-blue); /* Highlight border on hover */
 }
 
 .test-item h3 {
-    color: var(--primary-color);
-    font-size: 1.9em; /* NEW: Slightly larger */
-    margin-bottom: 15px;
+    color: var(--primary-blue);
+    font-size: 2.1em;
+    margin-bottom: 18px;
 }
 
 .test-item p {
-    font-size: 1.15em; /* NEW: Slightly larger */
-    margin-bottom: 12px;
-    line-height: 1.5;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--text-medium);
 }
 
 .test-item p strong {
-    color: var(--secondary-color); /* Stronger color for labels */
+    color: var(--primary-dark-blue);
 }
 
-/* General Page Layout - ensures footer is pushed to bottom */
+/* General Page Layout */
 main {
-    flex: 1; /* Pushes footer to the bottom on pages with less content */
+    flex: 1;
 }
 
 /* Contact Section */
 .contact-section {
-    background-color: var(--background-card);
+    background-color: var(--white-card);
     text-align: center;
+    padding-top: 60px; /* Consistent top padding for standalone sections */
+    padding-bottom: 80px; /* Consistent bottom padding */
+    border-radius: 15px; /* Ensure consistency */
+    box-shadow: 0 8px 30px var(--shadow-soft); /* Ensure consistency */
+    border: 1px solid var(--border-subtle); /* Ensure consistency */
 }
 
 .contact-section h2 {
-    margin-top: 0; /* Remove top margin for this specific instance if at top of section */
-    padding-bottom: 10px;
+    margin-top: 0;
+    padding-bottom: 18px;
 }
 .contact-section h2::after {
-    bottom: 5px; /* Adjust underline position for this h2 */
+    bottom: 0;
 }
 
 .contact-section p {
-    font-size: 1.3em; /* NEW: Slightly larger */
-    margin-bottom: 15px;
+    font-size: 1.35em; /* Slightly larger */
+    margin-bottom: 18px;
     line-height: 1.6;
+    color: var(--text-dark);
 }
 
 
@@ -498,24 +549,33 @@ main {
 #programs-page,
 #faculties-page,
 #institutions-page,
-#tests-page,
-#contact-page { /* All full-page sections */
-    padding-top: 70px; /* NEW: Consistent top padding */
-    padding-bottom: 90px; /* NEW: Consistent bottom padding */
+#tests-page { /* All full-page sections */
+    padding-top: 70px;
+    padding-bottom: 90px;
     margin-top: 0;
-    margin-bottom: 0; /* These are meant to be full-width, no external margin */
+    margin-bottom: 0;
     border-radius: 0; /* No border-radius for full-width sections */
     box-shadow: none; /* No shadow for full-width sections */
+    border: none; /* No border for full-width sections */
+    background-color: var(--light-grey-bg); /* Use light grey background for these full sections */
 }
+/* Ensure the content within these pages still gets container padding */
+#programs-page .container,
+#faculties-page .container,
+#institutions-page .container,
+#tests-page .container {
+    padding: 0 25px; /* Explicitly set horizontal padding */
+}
+
 
 /* Footer */
 .footer {
-    background-color: var(--secondary-color);
-    color: var(--text-color-light);
+    background-color: var(--primary-dark-blue);
+    color: var(--text-light);
     text-align: center;
-    padding: 30px 0; /* NEW: More padding */
+    padding: 38px 0; /* More padding */
     margin-top: auto;
-    font-size: 1em; /* NEW: Slightly larger font */
+    font-size: 1.08em; /* Slightly larger font */
 }
 
 /* Placeholder for images */
@@ -526,142 +586,38 @@ img {
 }
 
 /* Responsive Adjustments */
-/* Tablet and smaller screens (769px to 992px) */
+/* Tablet and smaller screens (up to 992px) - THIS IS WHERE THE NAV SWITCH OCCURS */
 @media (max-width: 992px) {
     .container {
-        padding: 20px;
+        padding: 0 20px;
     }
 
     h2 {
         font-size: 2.8em;
-        padding-bottom: 15px;
+        padding-bottom: 18px;
     }
     h2::after {
         width: 100px;
         height: 5px;
     }
 
-    .navbar ul li {
-        margin-left: 20px;
-    }
-
-    .hero-section {
-        padding: 120px 20px;
-        min-height: 550px;
-    }
-    .hero-section h1 {
-        font-size: 4em;
-    }
-    .hero-section p {
-        font-size: 1.5em;
-    }
-    .hero-section .btn {
-        padding: 18px 40px;
-        font-size: 1.3em;
-    }
-
-    section {
-        padding: 60px 0;
-        margin-bottom: 25px;
-    }
-
-    .card {
-        padding: 30px;
-    }
-    .card h3 {
-        font-size: 1.7em;
-    }
-
-    .faculty-card img {
-        width: 150px;
-        height: 150px;
-        border: 5px solid var(--primary-color);
-        box-shadow: 0 0 0 8px rgba(0,123,255,0.15);
-    }
-    .faculty-card ul li {
-        padding: 10px 20px;
-    }
-
-    .institution-card img {
-        height: 220px;
-    }
-    .institution-card h3 {
-        font-size: 2em;
-    }
-    .institution-card a {
-        padding: 14px 30px;
-        font-size: 1.1em;
-    }
-
-    .test-item {
-        padding: 25px;
-    }
-    .test-item h3 {
-        font-size: 1.7em;
-    }
-    .test-item p {
-        font-size: 1.1em;
-    }
-
-    .contact-section p {
-        font-size: 1.2em;
-    }
-}
-
-/* Mobile and smaller screens (up to 768px) */
-@media (max-width: 768px) {
-    :root {
-        --header-height: 90px; /* Slightly smaller header on very small screens */
-    }
-
-    .header .container {
-        flex-direction: row; /* Keep logo and toggle side-by-side */
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px; /* Adjust padding for mobile header */
-        flex-wrap: nowrap; /* Prevent wrapping of header elements */
-    }
-
-    .logo {
-        margin-bottom: 0;
-    }
-    .logo a {
-        flex-direction: row; /* Keep logo elements in a row on mobile */
-        gap: 10px;
-    }
-    .main-logo-img,
-    .logo-icon-img {
-        max-height: 50px; /* Adjusted size for smaller screens */
-    }
-
-    /* Show hamburger menu toggle on mobile */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Hide regular navigation on mobile */
+    /* Hide regular navigation on mobile/tablet */
     .navbar {
-        display: none;
+        display: none; /* Controlled by JS via body.nav-open when mobile menu is open */
         position: fixed; /* Use fixed for full screen overlay */
         top: var(--header-height); /* Position below header */
         left: 0;
         width: 100%;
         height: calc(100vh - var(--header-height)); /* Full viewport height minus header */
-        background-color: var(--secondary-color);
+        background-color: var(--primary-dark-blue);
         overflow-y: auto; /* Enable scrolling if menu items exceed height */
         z-index: 999; /* Below toggle, above content */
         transition: transform 0.3s ease-out;
         transform: translateX(100%); /* Start off-screen to the right */
     }
 
-    /* Show navigation when .nav-open class is on body */
-    body.nav-open .navbar {
-        display: block;
-        transform: translateX(0); /* Slide into view */
-    }
-
     .navbar ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack vertically for mobile */
         padding: 30px 0; /* More padding for mobile menu items */
         align-items: center;
         width: 100%;
@@ -671,179 +627,225 @@ img {
         width: 100%; /* Make list items full width */
     }
     .navbar ul li a {
-        display: block; /* Make links block level to fill li */
-        padding: 18px 20px; /* Larger tappable area */
+        padding: 15px 20px; /* Tighter padding for mobile nav */
+        border-bottom: 1px solid rgba(255,255,255,0.08); /* Lighter separator */
+        display: block; /* Make links block level */
         text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtle separators */
+        position: relative; /* Override desktop absolute */
     }
     .navbar ul li:last-child a {
         border-bottom: none;
     }
+    .navbar ul li a::after {
+        display: none; /* Hide underline animation on mobile nav */
+    }
     .navbar ul li a:hover {
         background-color: rgba(0,0,0,0.1); /* Lighter hover for menu */
     }
+    .navbar ul li a.active {
+        background-color: rgba(0,0,0,0.15); /* Keep active state distinct */
+    }
 
-    h2 {
-        font-size: 2.2em;
-        margin-top: 40px;
-        padding-bottom: 12px;
+    /* Show hamburger menu toggle on mobile/tablet */
+    .menu-toggle {
+        display: flex; /* Use flex to center hamburger lines */
+        justify-content: center;
+        align-items: center;
+        width: 50px; /* Explicit width */
+        height: 50px; /* Explicit height */
+        padding: 10px; /* Padding for the lines inside */
+        background-color: var(--primary-blue); /* Solid background for visibility */
+        border-radius: 8px; /* Rounded corners for the button */
+        flex-shrink: 0; /* Prevent button from shrinking */
     }
-    h2::after {
-        width: 80px;
-        height: 4px;
+
+    /* Show navigation when .nav-open class is on body */
+    body.nav-open .navbar {
+        display: block; /* Overrides .navbar { display: none; } */
+        transform: translateX(0); /* Slide into view */
     }
+
 
     .hero-section {
-        padding: 100px 15px;
-        min-height: 500px;
+        padding: 120px 20px;
+        min-height: 600px;
     }
     .hero-section h1 {
-        font-size: 3.5em;
-        margin-bottom: 20px;
+        font-size: 4.5em;
     }
     .hero-section p {
-        font-size: 1.4em;
-        margin-bottom: 30px;
-        max-width: 90%; /* Adjust max-width for smaller screens */
+        font-size: 1.7em;
     }
     .hero-section .btn {
-        padding: 15px 35px;
-        font-size: 1.2em;
+        padding: 20px 45px;
+        font-size: 1.4em;
     }
 
     section {
-        padding: 50px 0; /* Reduced padding for smaller screens */
-        margin-bottom: 20px;
+        padding: 60px 0;
+        margin-bottom: 30px;
     }
 
     .card {
-        padding: 25px;
+        padding: 32px;
+    }
+    .card h3 {
+        font-size: 1.9em;
     }
 
     .faculty-card img {
-        width: 130px;
-        height: 130px;
-        border: 4px solid var(--primary-color);
-        box-shadow: 0 0 0 6px rgba(0,123,255,0.15);
-    }
-    .faculty-card h3 {
-        font-size: 1.6em;
-    }
-    .faculty-card h4 {
-        font-size: 1.2em;
+        width: 160px;
+        height: 160px;
+        border: 5px solid var(--primary-blue);
+        box-shadow: 0 0 0 8px rgba(46,123,191,0.15);
     }
     .faculty-card ul li {
-        font-size: 1em;
-        padding: 10px 18px;
+        padding: 12px 22px;
     }
 
     .institution-card img {
-        height: 200px;
+        height: 230px;
     }
     .institution-card h3 {
-        font-size: 1.8em;
+        font-size: 2.2em;
     }
-    .institution-card p {
-        font-size: 1em;
+    .institution-card a {
+        padding: 16px 35px;
+        font-size: 1.2em;
     }
 
     .test-item {
-        padding: 20px;
+        padding: 30px;
     }
     .test-item h3 {
-        font-size: 1.6em;
+        font-size: 1.9em;
     }
     .test-item p {
-        font-size: 1.05em;
+        font-size: 1.15em;
     }
 
     .contact-section p {
-        font-size: 1.15em;
+        font-size: 1.25em;
+    }
+
+    #programs-page .container,
+    #faculties-page .container,
+    #institutions-page .container,
+    #tests-page .container {
+        padding: 0 20px;
     }
 }
 
 /* Extra small devices (less than 480px) */
 @media (max-width: 480px) {
     h1 {
-        font-size: 2.8em;
+        font-size: 2.8em; /* Further adjusted for very small screens */
+        letter-spacing: 0.2px;
     }
     h2 {
-        font-size: 2em;
-        margin-top: 30px;
+        font-size: 2.2em; /* Adjusted further for very small screens */
+        margin-top: 35px;
+        padding-bottom: 12px;
     }
     h2::after {
-        width: 60px;
+        width: 70px;
         height: 3px;
     }
 
     .hero-section {
-        padding: 80px 10px;
-        min-height: 400px;
+        padding: 70px 10px; /* Reduced padding slightly */
+        min-height: 400px; /* Adjusted min-height */
     }
     .hero-section h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Adjusted further */
+        margin-bottom: 20px;
     }
     .hero-section p {
-        font-size: 1.1em;
+        font-size: 1.25em; /* Adjusted further */
         margin-bottom: 25px;
         max-width: 95%;
     }
     .hero-section .btn {
         padding: 12px 25px;
-        font-size: 1em;
+        font-size: 1.05em; /* Adjusted further */
     }
 
     section {
-        padding: 40px 0;
+        padding: 35px 0; /* Reduced padding for very small screens */
         margin-bottom: 15px;
     }
 
     .card {
-        padding: 20px;
+        padding: 20px; /* Reduced padding */
     }
     .card h3 {
-        font-size: 1.4em;
+        font-size: 1.5em; /* Adjusted further */
+        margin-bottom: 15px;
     }
     .card p {
-        font-size: 1em;
+        font-size: 0.98em; /* Adjusted further for readability */
     }
 
     .faculty-card img {
-        width: 100px;
-        height: 100px;
-        border: 3px solid var(--primary-color);
-        box-shadow: 0 0 0 5px rgba(0,123,255,0.1);
+        width: 100px; /* Adjusted further */
+        height: 100px; /* Adjusted further */
+        border: 3px solid var(--primary-blue);
+        box-shadow: 0 0 0 4px rgba(46,123,191,0.08); /* Adjusted glow */
+        margin-bottom: 25px;
     }
     .faculty-card h3 {
-        font-size: 1.4em;
+        font-size: 1.4em; /* Adjusted further */
     }
     .faculty-card ul li {
-        font-size: 0.9em;
+        font-size: 0.9em; /* Adjusted further */
         padding: 8px 15px;
+        margin-bottom: 10px;
     }
 
     .institution-card img {
-        height: 160px;
+        height: 150px; /* Adjusted further */
+        margin-bottom: 20px;
     }
     .institution-card h3 {
-        font-size: 1.5em;
+        font-size: 1.6em; /* Adjusted further */
+    }
+    .institution-card .city {
+        font-size: 1.1em;
+    }
+    .institution-card p {
+        font-size: 1.0em;
+        margin-bottom: 20px;
     }
     .institution-card a {
         padding: 10px 20px;
-        font-size: 0.95em;
+        font-size: 0.9em; /* Adjusted further */
     }
 
     .test-item {
-        padding: 15px;
+        padding: 18px; /* Reduced padding */
     }
     .test-item h3 {
-        font-size: 1.4em;
+        font-size: 1.5em; /* Adjusted further */
     }
     .test-item p {
-        font-size: 0.95em;
+        font-size: 0.95em; /* Adjusted further */
     }
 
     .contact-section p {
-        font-size: 1em;
+        font-size: 1.05em; /* Adjusted further */
+    }
+    .programs-grid, .faculty-grid, .institutions-grid, .tests-list {
+        padding: 0 10px; /* Tighter padding for very small screens grids */
+        gap: 30px;
+    }
+    #programs-page .container,
+    #faculties-page .container,
+    #institutions-page .container,
+    #tests-page .container {
+        padding: 0 10px; /* Ensure consistency */
+    }
+    .footer {
+        padding: 30px 0;
+        font-size: 0.95em;
     }
 }
