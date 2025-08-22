@@ -1,7 +1,7 @@
 {
-  "name": "metier-institute-backend",
+  "name": "metier-study-center-backend",
   "version": "1.0.0",
-  "description": "Backend server for Metier Institute website",
+  "description": "Backend server for Metier Study Center website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

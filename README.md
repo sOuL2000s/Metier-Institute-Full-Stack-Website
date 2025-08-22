@@ -1,4 +1,4 @@
-# Metier Institute Full-Stack Website
+# Metier Study Center Full-Stack Website
 
 This project provides a full-stack web application for an educational institution, featuring a multi-page structure with dedicated sections for MBA test preparation programs, faculty details, institution lists (IIMs, XLRI, Symbiosis, Narsee Munjee), and test information.
 
@@ -58,7 +58,7 @@ The frontend consists of static HTML, CSS, and JavaScript files. Since API calls
 
 If you use VS Code, you can install the "Live Server" extension.
 1.  Right-click on `public/index.html` in your editor.
-2.  Select "Open with Live Server".
+2  Select "Open with Live Server".
     This will open the page in your default browser, usually on `http://127.0.0.1:5500` or `http://localhost:5500`.
     From the home page, you can then navigate to other sections.
 **Option B: Using a Simple Python HTTP Server**
