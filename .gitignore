@@ -1,4 +1,4 @@
-# Node.js
+# Node.js related (if you're still using Node for dev tools, otherwise remove)
 node_modules/
 .env
 

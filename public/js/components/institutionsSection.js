@@ -1,5 +1,5 @@
 import { createElement } from '../utils.js';
-import { fetchData } from '../api.js';
+import { fetchData } from '../dataService.js';
 
 export async function renderInstitutionsSection(parentSelector) {
     const parentElement = document.querySelector(parentSelector);

@@ -1,6 +1,6 @@
-# Metier Study Center Full-Stack Website
+# Metier Study Center Frontend-Only Website
 
-This project provides a full-stack web application for an educational institution, featuring a multi-page structure with dedicated sections for MBA test preparation programs, faculty details, institution lists (IIMs, XLRI, Symbiosis, Narsee Munjee), and test information.
+This project provides a static, purely front-end web application for an educational institution. It features a multi-page structure with dedicated sections for MBA test preparation programs, faculty details, institution lists (IIMs, XLRI, Symbiosis, Narsee Munjee), and test information.
 
 ## Project Structure
 
@@ -12,62 +12,47 @@ This project provides a full-stack web application for an educational institutio
     -   `public/tests.html`: Dedicated page for test information.
     -   `public/contact.html`: Dedicated contact page.
     -   `public/css/`: Stylesheets.
-    -   `public/js/`: General utilities and API interaction.
+    -   `public/js/`: General utilities, components, and now, your application data (`dataService.js`).
     -   `public/js/components/`: Reusable UI components for rendering sections.
     -   `public/js/pages/`: Page-specific entry point scripts.
--   `server/`: Contains the backend Node.js server and data.
 
 ## Features
 
 -   **Responsive Design:** Basic responsive styling included.
 -   **Multi-Page Frontend:** Each major section has its own dedicated HTML page.
 -   **Modular JavaScript:** Each page loads only the necessary JavaScript components.
--   **RESTful API:** Node.js Express backend to serve dynamic content.
--   **Dynamic Content Loading:** Data fetched from the backend API.
+-   **Static Data:** All dynamic content is now directly embedded within the frontend JavaScript, eliminating the need for a backend server and improving load times.
+-   **Instant Content Loading:** Data is available immediately without network delays.
 
-## Setup & Running the Application
+## Setup & Running the Application (Pure Frontend)
 
-Follow these steps to get the application up and running on your local machine. You'll need two separate terminal windows for the backend and frontend.
+Follow these steps to get the application up and running on your local machine. This is now a completely static site, so you just need a simple HTTP server.
 
 ### Prerequisites
 
-You need to have Node.js and npm (Node Package Manager) installed on your system.
-You can download them from [nodejs.org](https://nodejs.org/).
+You need a simple HTTP server to serve static files. If you use VS Code, the "Live Server" extension is highly recommended. Otherwise, Python provides a simple option.
 
-### 1. Backend Server Setup
+### Running the Frontend
 
-1.  Navigate into the `server` directory:
-    ```bash
-    cd Metier-Institute-Full-Stack-Website/server
-    ```
-2.  Install the required Node.js packages:
-    ```bash
-    npm install
-    ```
-3.  Start the backend server:
-    ```bash
-    node server.js
-    ```
-    The server will typically run on `http://localhost:3000`. Keep this terminal window open as the frontend relies on this server for data.
+The frontend consists of static HTML, CSS, and JavaScript files. It's crucial to serve these files via a local HTTP server to avoid CORS issues from `file://` protocol and ensure JavaScript module imports work correctly.
 
-### 2. Frontend Setup
-
-The frontend consists of static HTML, CSS, and JavaScript files. Since API calls are made, it's crucial to serve these files via a local HTTP server to avoid CORS issues from `file://` protocol.
-
-**Option A: Using Live Server (Recommended for Development)**
+**Option A: Using Live Server (Recommended for Development in VS Code)**
 
 If you use VS Code, you can install the "Live Server" extension.
-1.  Right-click on `public/index.html` in your editor.
-2  Select "Open with Live Server".
+1.  Open your project in VS Code.
+2.  Right-click on `public/index.html` in your editor.
+3.  Select "Open with Live Server".
     This will open the page in your default browser, usually on `http://127.0.0.1:5500` or `http://localhost:5500`.
     From the home page, you can then navigate to other sections.
+
 **Option B: Using a Simple Python HTTP Server**
 
-1.  Navigate to the `public` directory:
+1.  Open your terminal or command prompt.
+2.  Navigate to the `public` directory:
     ```bash
-    cd Metier-Institute-Full-Stack-Website/public
+    cd your-project-root/public
     ```
-2.  Run a simple Python HTTP server:
+3.  Run a simple Python HTTP server:
     ```bash
     python -m http.server 8000
     ```
@@ -75,10 +60,10 @@ If you use VS Code, you can install the "Live Server" extension.
 
 ### Important Notes:
 
+-   **Instant Loading:** You should notice a significant improvement in how quickly your content loads, as there are no backend requests.
 -   **Multi-page Navigation:** Once the frontend server is running (e.g., `http://localhost:5500`), you can navigate to `programs.html`, `faculties.html`, etc., directly or by using the navigation links in the header.
--   **Images:** Placeholder image URLs are used. Replace `public/assets/images/placeholder.jpg` with your actual image files and update the paths in `server/data.json` accordingly.
--   **Styling:** The `style.css` provides a basic foundation. You will need to expand upon it to achieve your desired aesthetic and responsiveness.
--   **Data Persistence:** The `server/data.json` file acts as a simple database. For a production application, you would replace this with a real database (e.g., MongoDB, PostgreSQL, MySQL) and corresponding database interaction logic in `server.js`.
+-   **Images:** Placeholder image URLs are used. Ensure your `public/assets/images/` directory contains the actual image files referenced in `public/js/dataService.js` (e.g., `faculty_soumyadip.jpg`, `iima.jpg`).
+-   **Dynamic Updates:** For future updates to your programs, faculties, institutions, or tests, you will need to directly edit the `ALL_APP_DATA` object within `public/js/dataService.js`.
 
 ---
 
