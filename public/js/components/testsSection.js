@@ -22,8 +22,12 @@ export async function renderTestsSection(parentSelector) {
     tests.forEach(test => {
         const testItem = createElement('div', 'test-item', {}, [
             createElement('h3', null, {}, test.name),
-            createElement('p', null, {}, [createElement('strong', null, {}, 'Typical Time: '), test.time]),
-            createElement('p', null, {}, [createElement('strong', null, {}, 'Qualification Needed: '), test.qualification])
+            createElement('p', null, {}, [createElement('strong', null, {}, 'Month: '), test.time]),
+            createElement('p', null, {}, [createElement('strong', null, {}, 'Duration: '), test.duration]),
+            createElement('p', null, {}, [createElement('strong', null, {}, 'Sections: '), test.sections]),
+            createElement('p', null, {}, [createElement('strong', null, {}, 'Total Questions: '), test.totalQs]),
+            createElement('p', null, {}, [createElement('strong', null, {}, 'Negative Marking: '), test.negativeMarking]),
+            createElement('p', null, {}, [createElement('strong', null, {}, 'Sectional Time Limit: '), test.sectionalTimeLimit])
         ]);
         testsList.appendChild(testItem);
     });

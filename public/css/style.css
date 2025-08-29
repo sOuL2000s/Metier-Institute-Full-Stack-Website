@@ -421,6 +421,9 @@ section {
 }
 
 /* Institution Specific Styles */
+.institution-card {
+    text-align: left; /* Align text left for better readability with more data */
+}
 .institution-card img {
     max-width: 100%;
     height: 260px; /* Taller image for greater impact */
@@ -430,6 +433,8 @@ section {
     box-shadow: 0 3px 12px rgba(0,0,0,0.18); /* Image specific shadow */
     filter: grayscale(80%); /* NEW: Grayscale by default */
     transition: filter 0.4s ease; /* Transition for grayscale */
+    margin-left: auto; /* Center image within flex column */
+    margin-right: auto; /* Center image within flex column */
 }
 
 .institution-card img:hover {
@@ -450,8 +455,14 @@ section {
 .institution-card p {
     font-size: 1.15em;
     color: var(--text-medium);
-    margin-bottom: 30px; /* More space before button */
+    margin-bottom: 10px; /* Reduced margin for more data fields */
     line-height: 1.6;
+}
+
+.institution-card p strong { /* NEW: Styling for strong tags in institution cards */
+    color: var(--primary-dark-blue);
+    font-weight: 600;
+    margin-right: 5px;
 }
 
 .institution-card a {
@@ -466,6 +477,8 @@ section {
     text-transform: uppercase; /* NEW: Uppercase for consistency */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    margin-top: 20px; /* Add space above button */
+    align-self: center; /* Center the button if card is flex column */
 }
 
 .institution-card a:hover {
@@ -504,13 +517,15 @@ section {
 
 .test-item p {
     font-size: 1.2em;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Adjusted margin for more data fields */
     line-height: 1.6;
     color: var(--text-medium);
 }
 
-.test-item p strong {
+.test-item p strong { /* NEW: Styling for strong tags in test items */
     color: var(--primary-dark-blue);
+    font-weight: 600;
+    margin-right: 5px;
 }
 
 /* General Page Layout */
@@ -814,7 +829,7 @@ img {
     }
     .institution-card p {
         font-size: 1.0em;
-        margin-bottom: 20px;
+        margin-bottom: 10px; /* Adjusted for more data fields */
     }
     .institution-card a {
         padding: 10px 20px;

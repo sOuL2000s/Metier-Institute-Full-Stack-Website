@@ -80,15 +80,23 @@ The following content was extracted from your provided chat snippets and impleme
 -   **Sabyasachi Sarkar:** Mentoring Quantitative Ability, Data Interpretation and Logical Reasoning, Verbal Ability and Reading Comprehension
 
 ### Institutions:
--   IIM Ahmedabad
--   IIM Bangalore
--   IIM Calcutta
--   XLRI Jamshedpur
--   SYMBIOSIS Pune (SIBM Pune)
--   Narsee Monjee (NMIMS Mumbai)
+(Updated with Category, Exams Accepted, Avg Salary, Total Fees. Example entries below, full list too long for README)
+-   **FMS Delhi - MBA:** Category: A1, Exams: CAT, Avg Salary: 34.10 Lakhs, Total Fees: 4.92 Lakhs.
+-   **IIM Ahmedabad - MBA:** Category: A1, Exams: CAT, Avg Salary: 34.45 Lakhs, Total Fees: 26.50 Lakhs.
+-   **XLRI - PGDM + PGDMHRM:** Category: A1, Exams: XAT, Avg Salary: 31.08 Lakhs, Total Fees: 33.40 Lakhs.
+-   **TISS - HRM:** Category: A2, Exams: CAT, Avg Salary: 26.31 Lakhs, Total Fees: 2.07 Lakhs.
+-   ... and many more IIMs and other top B-schools with detailed information.
 
 ### Tests:
--   **CAT (Common Admission Test):** Annually (Nov/Dec). Qualification: Bachelor's degree with 50% (45% for SC/ST/PwD).
--   **XAT (Xavier Aptitude Test):** Annually (Jan). Qualification: Bachelor's degree of minimum three years duration or equivalent.
--   **NMAT by GMAC:** Testing window (Oct-Dec). Qualification: Bachelor's degree (10+2+3/4) with 50%.
--   **SNAP (Symbiosis National Aptitude Test):** Annually (Dec). Qualification: Graduate with 50% (45% for SC/ST).
+-   **CAT:** Month: Nov, Duration: 120 mins, Sections: 3, Total Questions: 68, Negative Marking: MCQ- (Y) TITA*- (N), Sectional Time Limit: Yes.
+-   **MH-CET:** Month: March, Duration: 150 mins, Sections: 4, Total Questions: 200, Negative Marking: No, Sectional Time Limit: No.
+-   **CMAT:** Month: Jan, Duration: 180 mins, Sections: 5, Total Questions: 100, Negative Marking: Yes, Sectional Time Limit: Yes.
+-   **XAT:** Month: Jan, Duration: 180 mins, Sections: 3 Sections + GK, Total Questions: 75 + 20 (GK), Negative Marking: (No negative marking for GK), Sectional Time Limit: Yes.
+-   **SNAP:** Month: Dec, Duration: 60 mins, Sections: 3, Total Questions: 60, Negative Marking: Yes, Sectional Time Limit: No.
+-   **NMAT:** Month: Nov-Dec, Duration: 120 mins, Sections: 3, Total Questions: 108, Negative Marking: Score range: 12-360 (Adaptive), Sectional Time Limit: Yes.
+-   **MICAT:** Month: Dec/Jan, Duration: 135 mins, Sections: 3, Total Questions: 234, Negative Marking: Yes, Sectional Time Limit: Yes.
+-   **CUET PG:** Month: March, Duration: 90 mins, Sections: 4, Total Questions: 75, Negative Marking: Yes, Sectional Time Limit: Yes.
+-   **MAT:** Month: Feb/May/Aug/Dec, Duration: 120 mins, Sections: 5, Total Questions: 150, Negative Marking: Yes, Sectional Time Limit: No.
+-   **PGDBA:** Month: Feb, Duration: 180 mins, Sections: 4, Total Questions: 50, Negative Marking: No, Sectional Time Limit: No.
+-   **IBSAT:** Month: Dec, Duration: 120 mins, Sections: 4, Total Questions: 140, Negative Marking: No, Sectional Time Limit: No.
+-   **ATMA:** Month: Feb/ May/ July/ Dec, Duration: 180 mins, Sections: 6, Total Questions: 180, Negative Marking: Yes, Sectional Time Limit: Yes.
