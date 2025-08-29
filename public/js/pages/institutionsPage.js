@@ -1,7 +1,7 @@
-import { renderInstitutionsSection } from '../components/institutionsSection.js';
-import { setupMobileNavbarToggle } from '../navbar.js'; // NEW: Import mobile navbar toggle function
+import { renderInstitutionsCardsSection } from '../components/institutionsSection.js'; // MODIFIED IMPORT
+import { setupMobileNavbarToggle } from '../navbar.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderInstitutionsSection('#institutions-page');
-    setupMobileNavbarToggle(); // Setup mobile navigation toggle for all pages
+    renderInstitutionsCardsSection('#institutions-page'); // MODIFIED CALL
+    setupMobileNavbarToggle();
 });

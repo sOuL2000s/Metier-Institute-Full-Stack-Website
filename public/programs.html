@@ -35,7 +35,10 @@
     </header>
 
     <main>
-        <section id="programs-page" class="programs-section"></section>
+        <section id="programs-page" class="programs-section">
+            <div id="programs-cards-container" class="container"></div> <!-- NEW: Container for program cards -->
+            <div id="programs-institutions-table-container" class="container"></div> <!-- Existing container for the table -->
+        </section>
     </main>
 
     <footer class="footer">
@@ -45,10 +48,11 @@
     </footer>
 
     <!-- JavaScript Files for this page -->
-    <script type="module" src="js/navbar.js"></script> <!-- NEW: Mobile navbar JS -->
+    <script type="module" src="js/navbar.js"></script>
     <script type="module" src="js/utils.js"></script>
     <script type="module" src="js/dataService.js"></script>
     <script type="module" src="js/components/prograamsSection.js"></script>
+    <script type="module" src="js/components/institutionsTableSection.js"></script> <!-- NEW IMPORT -->
     <script type="module" src="js/pages/programsPage.js"></script>
 </body>
 </html>

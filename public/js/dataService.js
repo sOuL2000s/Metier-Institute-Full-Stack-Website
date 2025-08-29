@@ -38,9 +38,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/fms.png",
       "link": "https://fms.edu/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "34.10",
       "totalFees": "4.92"
     },
@@ -52,9 +50,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iima.jpg",
       "link": "https://www.iima.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "34.45",
       "totalFees": "26.50"
     },
@@ -66,9 +62,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimb.jpg",
       "link": "https://www.iimb.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "35.92",
       "totalFees": "27.40"
     },
@@ -80,9 +74,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimc.jpg",
       "link": "https://www.iimcal.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "35.07",
       "totalFees": "31.00"
     },
@@ -94,9 +86,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimi.png",
       "link": "https://www.iimidr.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "25.68",
       "totalFees": "21.17"
     },
@@ -108,9 +98,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimk.png",
       "link": "https://iimk.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "28.05",
       "totalFees": "20.50"
     },
@@ -122,11 +110,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimk.png",
       "link": "https://iimk.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT",
-        "GMAT",
-        "GRE"
-      ],
+      "examsAccepted": ["CAT", "GMAT", "GRE"],
       "avgSalary": "28.05",
       "totalFees": "20.50"
     },
@@ -138,11 +122,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimk.png",
       "link": "https://iimk.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT",
-        "GMAT",
-        "GRE"
-      ],
+      "examsAccepted": ["CAT", "GMAT", "GRE"],
       "avgSalary": "28.05",
       "totalFees": "20.75"
     },
@@ -154,25 +134,19 @@ const ALL_APP_DATA = {
       "image": "assets/images/iiml.png",
       "link": "https://www.iiml.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "30.00",
       "totalFees": "20.75"
     },
     {
       "id": 10,
-      "name": "ISB - PGP YLP",
+      "name": "ISB - PGP", // Changed from "ISB - PGP YLP" to "ISB - PGP" as per image
       "city": "Hyderabad/Mohali",
       "description": "A leading management institution.",
       "image": "assets/images/isb.jpg",
       "link": "https://www.isb.edu/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT",
-        "GMAT",
-        "GRE"
-      ],
+      "examsAccepted": ["GMAT", "GRE"], // Updated from CAT, GMAT, GRE to GMAT, GRE as per image
       "avgSalary": "32.50",
       "totalFees": "39.10"
     },
@@ -184,10 +158,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/bvbsp.png",
       "link": "https://www.spjimr.org/",
       "category": "A1",
-      "examsAccepted": [
-        "CAT",
-        "GMAT"
-      ],
+      "examsAccepted": ["CAT", "GMAT"],
       "avgSalary": "NA",
       "totalFees": "29.99"
     },
@@ -199,9 +170,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/xlri.jpg",
       "link": "https://www.xlri.ac.in/",
       "category": "A1",
-      "examsAccepted": [
-        "XAT"
-      ],
+      "examsAccepted": ["XAT"],
       "avgSalary": "31.08",
       "totalFees": "33.40"
     },
@@ -213,11 +182,9 @@ const ALL_APP_DATA = {
       "image": "assets/images/iift.png",
       "link": "https://iift.ac.in/",
       "category": "A2",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "27.30",
-      "totalFees": "27.00"
+      "totalFees": "21.87"
     },
     {
       "id": 14,
@@ -227,9 +194,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimm.png",
       "link": "https://iimmumbai.ac.in/",
       "category": "A2",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "33.84",
       "totalFees": "21.00"
     },
@@ -241,9 +206,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimcpgba.jpg",
       "link": "https://www.iimcal.ac.in/programs/PGDBA",
       "category": "A2",
-      "examsAccepted": [
-        "PGDBA"
-      ],
+      "examsAccepted": ["PGDBA"],
       "avgSalary": "29.71",
       "totalFees": "25.00"
     },
@@ -255,9 +218,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iims.png",
       "link": "https://www.iimshillong.ac.in/",
       "category": "A2",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "26.10",
       "totalFees": "26.18"
     },
@@ -269,13 +230,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/jbims.png",
       "link": "https://www.jbims.edu/",
       "category": "A2",
-      "examsAccepted": [
-        "CET",
-        "CAT",
-        "CMAT",
-        "MAT",
-        "ATMA"
-      ],
+      "examsAccepted": ["CET", "CAT", "CMAT", "MAT", "ATMA"],
       "avgSalary": "26.20",
       "totalFees": "6.00"
     },
@@ -287,10 +242,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/mdi.png",
       "link": "https://www.mdi.ac.in/",
       "category": "A2",
-      "examsAccepted": [
-        "CAT",
-        "GMAT"
-      ],
+      "examsAccepted": ["CAT", "GMAT"],
       "avgSalary": "28.16",
       "totalFees": "28.16"
     },
@@ -302,9 +254,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/tiss.jpg",
       "link": "https://admissions.tiss.ac.in/",
       "category": "A2",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "26.31",
       "totalFees": "2.07"
     },
@@ -316,9 +266,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimi.png",
       "link": "https://www.iimidr.ac.in/",
       "category": "A3",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "25.01",
       "totalFees": "18.42"
     },
@@ -330,11 +278,33 @@ const ALL_APP_DATA = {
       "image": "assets/images/nmims.jpg",
       "link": "https://www.nmims.edu/",
       "category": "A3",
-      "examsAccepted": [
-        "NMAT"
-      ],
+      "examsAccepted": ["NMAT"],
       "avgSalary": "25.13",
       "totalFees": "25.00"
+    },
+    {
+      "id": 28, // Reusing ID for SIBM Pune
+      "name": "Symbiosis Institute of Business Management (SIBM Pune) - MBA",
+      "city": "Pune",
+      "description": "Part of Symbiosis International University, offering diverse MBA programs and known for its vibrant student life.",
+      "image": "assets/images/sibm.jpg",
+      "link": "https://www.sibm.edu/",
+      "category": "A3", // Corrected from A4 to A3 as per image
+      "examsAccepted": ["SNAP"],
+      "avgSalary": "28.80",
+      "totalFees": "24.90"
+    },
+    {
+      "id": 34, // Reusing ID for SCMHRD
+      "name": "SCMHRD - MBA",
+      "city": "Pune", // Added city based on common knowledge for SCMHRD
+      "description": "A leading management institution.", // Retained description
+      "image": "assets/images/scmhrd.jpg", // Retained image
+      "link": "https://scmhrd.edu/", // Retained link
+      "category": "A3", // Corrected from A5 to A3 as per image
+      "examsAccepted": ["SNAP"],
+      "avgSalary": "24.28",
+      "totalFees": "24.12"
     },
     {
       "id": 22,
@@ -344,9 +314,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimrai.jpeg",
       "link": "https://www.iimraipur.ac.in/",
       "category": "A4",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "18.15",
       "totalFees": "18.00"
     },
@@ -358,9 +326,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimra.png",
       "link": "https://www.iimranchi.ac.in/",
       "category": "A4",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "19.24",
       "totalFees": "19.23"
     },
@@ -372,9 +338,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimr.png",
       "link": "https://www.iimrohtak.ac.in/",
       "category": "A4",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "18.73",
       "totalFees": "17.90"
     },
@@ -386,9 +350,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimt.jpeg",
       "link": "https://www.iimtrichy.ac.in/",
       "category": "A4",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "19.43",
       "totalFees": "19.50"
     },
@@ -400,9 +362,7 @@ const ALL_APP_DATA = {
       "image": "assets/images/iimu.png",
       "link": "https://www.iimu.ac.in/",
       "category": "A4",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "18.80",
       "totalFees": "20.43"
     },
@@ -414,170 +374,105 @@ const ALL_APP_DATA = {
       "image": "assets/images/mica.png",
       "link": "https://www.mica.ac.in/",
       "category": "A4",
-      "examsAccepted": [
-        "CAT",
-        "XAT",
-        "GMAT",
-        "MICAT"
-      ],
+      "examsAccepted": ["CAT", "XAT", "GMAT", "MICAT"],
       "avgSalary": "19.22",
       "totalFees": "26.00"
     },
     {
-      "id": 28,
-      "name": "Symbiosis Institute of Business Management (SIBM Pune) - MBA",
-      "city": "Pune",
-      "description": "Part of Symbiosis International University, offering diverse MBA programs and known for its vibrant student life.",
-      "image": "assets/images/sibm.jpg",
-      "link": "https://www.sibm.edu/",
-      "category": "A4",
-      "examsAccepted": [
-        "SNAP"
-      ],
-      "avgSalary": "28.80",
-      "totalFees": "24.90"
-    },
-    {
       "id": 29,
       "name": "IIM Amritsar - MBA + MBA BA + MBA HRM",
-      "city": "Amritsar",
-      "description": "Focuses on providing quality management education with a strong regional connect.",
-      "image": "assets/images/iima.png",
-      "link": "https://iimamritsar.ac.in/",
+      "city": "Amritsar", // Added city
+      "description": "Focuses on providing quality management education with a strong regional connect.", // Added description
+      "image": "assets/images/iima.png", // Placeholder, assuming a generic IIM image or specific if available
+      "link": "https://iimamritsar.ac.in/", // Added link
       "category": "A5",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "15.51",
       "totalFees": "17.30"
     },
     {
       "id": 30,
       "name": "IIM Jammu - MBA",
-      "city": "Jammu",
-      "description": "Strives for excellence in management education in the northernmost region.",
-      "image": "assets/images/iimj.png",
-      "link": "https://www.iimj.ac.in/",
+      "city": "Jammu", // Added city
+      "description": "Strives for excellence in management education in the northernmost region.", // Added description
+      "image": "assets/images/iimj.png", // Placeholder
+      "link": "https://www.iimj.ac.in/", // Added link
       "category": "A5",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "16.54",
       "totalFees": "17.15"
     },
     {
       "id": 31,
       "name": "IIM Kashipur - MBA + MBA Analytics",
-      "city": "Kashipur",
-      "description": "Promotes research, innovation, and entrepreneurship in its management programs.",
-      "image": "assets/images/iimka.png",
-      "link": "https://www.iimkashipur.ac.in/",
+      "city": "Kashipur", // Added city
+      "description": "Promotes research, innovation, and entrepreneurship in its management programs.", // Added description
+      "image": "assets/images/iimka.png", // Placeholder
+      "link": "https://www.iimkashipur.ac.in/", // Added link
       "category": "A5",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "18.10",
       "totalFees": "17.30"
     },
     {
       "id": 32,
       "name": "IIM Ranchi - MBA BA",
-      "city": "Ranchi",
-      "description": "Offers PGP and doctoral programs with a focus on management research.",
-      "image": "assets/images/iimra.png",
-      "link": "https://www.iimranchi.ac.in/",
+      "city": "Ranchi", // Added city
+      "description": "Offers PGP and doctoral programs with a focus on management research.", // Added description
+      "image": "assets/images/iimra.png", // Placeholder
+      "link": "https://www.iimranchi.ac.in/", // Added link
       "category": "A5",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "19.87",
       "totalFees": "17.50"
     },
     {
       "id": 33,
       "name": "IIM Visakhapatnam (IIMV) - PGP",
-      "city": "Visakhapatnam",
-      "description": "Strives for academic rigor and social relevance in management education.",
-      "image": "assets/images/iimv.png",
-      "link": "https://www.iimv.ac.in/",
+      "city": "Visakhapatnam", // Added city
+      "description": "Strives for academic rigor and social relevance in management education.", // Added description
+      "image": "assets/images/iimv.png", // Placeholder
+      "link": "https://www.iimv.ac.in/", // Added link
       "category": "A5",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "15.61",
       "totalFees": "19.00"
     },
     {
-      "id": 34,
-      "name": "SCMHRD - MBA",
-      "city": "Pune",
-      "description": "A leading management institution.",
-      "image": "assets/images/scmhrd.jpg",
-      "link": "https://scmhrd.edu/",
-      "category": "A5",
-      "examsAccepted": [
-        "SNAP"
-      ],
-      "avgSalary": "24.28",
-      "totalFees": "24.12"
-    },
-    {
       "id": 35,
       "name": "IIM Bodh Gaya - MBA",
-      "city": "Bodh Gaya",
-      "description": "Aims to create socially responsible leaders and managers.",
-      "image": "assets/images/iimb.png",
-      "link": "https://iimbg.ac.in/",
+      "city": "Bodh Gaya", // Added city
+      "description": "Aims to create socially responsible leaders and managers.", // Added description
+      "image": "assets/images/iimb.png", // Placeholder
+      "link": "https://iimbg.ac.in/", // Added link
       "category": "B1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "13.70",
       "totalFees": "17.96"
     },
     {
       "id": 36,
       "name": "IIM Sambalpur - MBA",
-      "city": "Sambalpur",
-      "description": "Promotes a holistic learning experience in a serene environment.",
-      "image": "assets/images/iimsmb.png",
-      "link": "https://iimsambalpur.ac.in/",
+      "city": "Sambalpur", // Added city
+      "description": "Promotes a holistic learning experience in a serene environment.", // Added description
+      "image": "assets/images/iimsmb.png", // Placeholder
+      "link": "https://iimsambalpur.ac.in/", // Added link
       "category": "B1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "14.21",
       "totalFees": "13.08"
     },
     {
       "id": 37,
       "name": "IIM Sirmaur - MBA",
-      "city": "Sirmaur",
-      "description": "Aims to foster innovation, leadership, and entrepreneurship in the Himalayas.",
-      "image": "assets/images/iimsir.png",
-      "link": "https://iimsirmaur.ac.in/",
+      "city": "Sirmaur", // Added city
+      "description": "Aims to foster innovation, leadership, and entrepreneurship in the Himalayas.", // Added description
+      "image": "assets/images/iimsir.png", // Placeholder
+      "link": "https://iimsirmaur.ac.in/", // Added link
       "category": "B1",
-      "examsAccepted": [
-        "CAT"
-      ],
+      "examsAccepted": ["CAT"],
       "avgSalary": "13.93",
       "totalFees": "16.00"
-    },
-    {
-      "id": 38,
-      "name": "Indian Institute of Management Nagpur (IIMN)",
-      "city": "Nagpur",
-      "description": "Dedicated to creating responsive and responsible business leaders.",
-      "image": "assets/images/iimn.png",
-      "link": "https://www.iimnagpur.ac.in/"
-    },
-    {
-      "id": 39,
-      "name": "Xavier Institute of Management, Bhubaneswar (XIMB)",
-      "city": "Bhubaneswar",
-      "description": "Renowned for its management programs and emphasis on responsible leadership.",
-      "image": "assets/images/xim.jpeg",
-      "link": "https://www.ximb.edu.in/"
     }
   ],
   "tests": [

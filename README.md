@@ -6,14 +6,16 @@ This project provides a static, purely front-end web application for an educatio
 
 -   `public/`: Contains all frontend assets (HTML, CSS, JavaScript, images).
     -   `public/index.html`: The main home page.
-    -   `public/programs.html`: Dedicated page for programs.
+    -   `public/programs.html`: Dedicated page for programs, now also includes the detailed B-schools table.
     -   `public/faculties.html`: Dedicated page for faculties.
-    -   `public/institutions.html`: Dedicated page for institutions.
+    -   `public/institutions.html`: Dedicated page for institutions, now featuring individual institution cards.
     -   `public/tests.html`: Dedicated page for test information.
     -   `public/contact.html`: Dedicated contact page.
     -   `public/css/`: Stylesheets.
     -   `public/js/`: General utilities, components, and now, your application data (`dataService.js`).
     -   `public/js/components/`: Reusable UI components for rendering sections.
+        -   `public/js/components/institutionsSection.js`: Renders institution cards.
+        -   `public/js/components/institutionsTableSection.js`: Renders the detailed B-schools table.
     -   `public/js/pages/`: Page-specific entry point scripts.
 
 ## Features
@@ -52,7 +54,7 @@ If you use VS Code, you can install the "Live Server" extension.
     ```bash
     cd your-project-root/public
     ```
-3.  Run a simple Python HTTP server:
+3  Run a simple Python HTTP server:
     ```bash
     python -m http.server 8000
     ```
@@ -74,18 +76,29 @@ The following content was extracted from your provided chat snippets and impleme
 ### Programs:
 -   MBA Entrance Test preparation
 -   Exclusive mentoring for CAT, XAT, NMAT, SNAP etc
+-   **Detailed B-Schools Table:** A comprehensive table listing top B-schools with columns for 'Institute Name', 'Category', 'Exams Accepted', 'Avg Salary (in Lakhs)', and 'Total Fees (in Lakhs)'. This table is now located on the `programs.html` page, below the program descriptions.
+    -   **Data Source:** All data is as on 5th June 2025.
+    -   **Example Entries (full list available on the website):**
+        -   **FMS Delhi - MBA:** Category: A1, Exams: CAT, Avg Salary: 34.10 Lakhs, Total Fees: 4.92 Lakhs.
+        -   **IIM Ahmedabad - MBA:** Category: A1, Exams: CAT, Avg Salary: 34.45 Lakhs, Total Fees: 26.50 Lakhs.
+        -   **XLRI - PGDM + PGDMHRM:** Category: A1, Exams: XAT, Avg Salary: 31.08 Lakhs, Total Fees: 33.40 Lakhs.
+        -   **TISS - HRM:** Category: A2, Exams: CAT, Avg Salary: 26.31 Lakhs, Total Fees: 2.07 Lakhs.
+        -   ... and many more IIMs and other top B-schools with detailed information.
 
 ### Faculties:
 -   Highly experienced faculties in the Test Prep industry
 -   **Sabyasachi Sarkar:** Mentoring Quantitative Ability, Data Interpretation and Logical Reasoning, Verbal Ability and Reading Comprehension
 
 ### Institutions:
-(Updated with Category, Exams Accepted, Avg Salary, Total Fees. Example entries below, full list too long for README)
--   **FMS Delhi - MBA:** Category: A1, Exams: CAT, Avg Salary: 34.10 Lakhs, Total Fees: 4.92 Lakhs.
--   **IIM Ahmedabad - MBA:** Category: A1, Exams: CAT, Avg Salary: 34.45 Lakhs, Total Fees: 26.50 Lakhs.
--   **XLRI - PGDM + PGDMHRM:** Category: A1, Exams: XAT, Avg Salary: 31.08 Lakhs, Total Fees: 33.40 Lakhs.
--   **TISS - HRM:** Category: A2, Exams: CAT, Avg Salary: 26.31 Lakhs, Total Fees: 2.07 Lakhs.
--   ... and many more IIMs and other top B-schools with detailed information.
+(Now presented as individual cards on the 'Institutions' page)
+-   **Top Management Institutions:** A list of top B-schools, each presented as a card with an image, name, city, category, accepted exams, average salary, total fees, and a link to their website.
+-   **Data Source:** All data is as on 5th June 2025.
+-   **Example Entries (full list available on the website):**
+    -   **FMS Delhi - MBA:** New Delhi, Category: A1, Exams: CAT, Avg Salary: 34.10 Lakhs, Total Fees: 4.92 Lakhs.
+    -   **IIM Ahmedabad - MBA:** Ahmedabad, Category: A1, Exams: CAT, Avg Salary: 34.45 Lakhs, Total Fees: 26.50 Lakhs.
+    -   **XLRI - PGDM + PGDMHRM:** Jamshedpur, Category: A1, Exams: XAT, Avg Salary: 31.08 Lakhs, Total Fees: 33.40 Lakhs.
+    -   **TISS - HRM:** Mumbai, Category: A2, Exams: CAT, Avg Salary: 26.31 Lakhs, Total Fees: 2.07 Lakhs.
+    -   ... and many more IIMs and other top B-schools with detailed information.
 
 ### Tests:
 -   **CAT:** Month: Nov, Duration: 120 mins, Sections: 3, Total Questions: 68, Negative Marking: MCQ- (Y) TITA*- (N), Sectional Time Limit: Yes.

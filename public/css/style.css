@@ -28,6 +28,13 @@
     --shadow-deep: rgba(0, 0, 0, 0.2); /* Pronounced for strong elevation */
 
     --header-height: 95px; /* Adjusted for better proportion */
+
+    /* New colors for table */
+    --table-header-bg: var(--primary-dark-blue); /* Dark blue for header */
+    --table-header-text: var(--text-light);
+    --table-row-even-bg: #F0F4F8; /* Light grey-blue for even rows */
+    --table-row-odd-bg: var(--white-card); /* White for odd rows */
+    --table-border-color: var(--border-subtle);
 }
 
 body {
@@ -305,7 +312,7 @@ section {
 }
 
 /* Programs, Faculties, Institutions, Tests Sections - Grid/Flex Layouts */
-.programs-grid, .faculty-grid, .institutions-grid, .tests-list {
+.programs-grid, .faculty-grid, .tests-list {
     display: grid;
     gap: 40px;
     margin-top: 55px; /* More space below section title */
@@ -320,9 +327,15 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+/* Institutions Grid for Cards (Re-enabled) */
 .institutions-grid {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 55px;
+    padding: 0 25px;
 }
+
 
 .card {
     background-color: var(--white-card);
@@ -420,73 +433,74 @@ section {
     border-color: var(--accent-orange);
 }
 
-/* Institution Specific Styles */
+/* Institution Specific Styles (Re-enabled for cards) */
 .institution-card {
-    text-align: left; /* Align text left for better readability with more data */
+    text-align: left;
 }
 .institution-card img {
     max-width: 100%;
-    height: 260px; /* Taller image for greater impact */
+    height: 260px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 28px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.18); /* Image specific shadow */
-    filter: grayscale(80%); /* NEW: Grayscale by default */
-    transition: filter 0.4s ease; /* Transition for grayscale */
-    margin-left: auto; /* Center image within flex column */
-    margin-right: auto; /* Center image within flex column */
+    box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+    filter: grayscale(80%);
+    transition: filter 0.4s ease;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .institution-card img:hover {
-    filter: grayscale(0%); /* Full color on hover */
+    filter: grayscale(0%);
 }
 
 .institution-card h3 {
-    font-size: 2.4em; /* Larger institution name */
+    font-size: 2.4em;
     margin-bottom: 12px;
 }
 
 .institution-card .city {
     color: var(--text-medium);
-    font-size: 1.25em; /* Slightly larger */
+    font-size: 1.25em;
     margin-bottom: 20px;
 }
 
 .institution-card p {
     font-size: 1.15em;
     color: var(--text-medium);
-    margin-bottom: 10px; /* Reduced margin for more data fields */
+    margin-bottom: 10px;
     line-height: 1.6;
 }
 
-.institution-card p strong { /* NEW: Styling for strong tags in institution cards */
+.institution-card p strong {
     color: var(--primary-dark-blue);
     font-weight: 600;
     margin-right: 5px;
 }
 
-.institution-card a {
+.institution-card a.btn { /* Target specifically the button within the card */
     display: inline-block;
     background-color: var(--accent-orange);
     color: var(--text-light) !important;
-    padding: 18px 40px; /* More padding */
+    padding: 18px 40px;
     border-radius: 50px;
-    font-size: 1.25em; /* Slightly larger font */
+    font-size: 1.25em;
     font-weight: 700;
     letter-spacing: 1px;
-    text-transform: uppercase; /* NEW: Uppercase for consistency */
+    text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-    margin-top: 20px; /* Add space above button */
-    align-self: center; /* Center the button if card is flex column */
+    margin-top: 20px;
+    align-self: center;
 }
 
-.institution-card a:hover {
+.institution-card a.btn:hover {
     background-color: var(--accent-orange-hover);
     text-decoration: none;
     transform: translateY(-6px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.35);
 }
+
 
 /* Tests Section */
 .tests-list {
@@ -563,7 +577,6 @@ main {
 /* For specific pages, adjust padding/margin */
 #programs-page,
 #faculties-page,
-#institutions-page,
 #tests-page { /* All full-page sections */
     padding-top: 70px;
     padding-bottom: 90px;
@@ -577,10 +590,96 @@ main {
 /* Ensure the content within these pages still gets container padding */
 #programs-page .container,
 #faculties-page .container,
-#institutions-page .container,
 #tests-page .container {
     padding: 0 25px; /* Explicitly set horizontal padding */
 }
+
+/* Institutions Section - Table Specific Styles */
+/* These styles are now more generic and will apply wherever the table is rendered */
+.institutions-section h2, /* Keep this for the table title on programs page */
+#programs-institutions-table-container h2 { /* Target the new container for the table title */
+    margin-top: 60px; /* Ensure consistent top margin for titles */
+    margin-bottom: 10px; /* Adjust margin for the note */
+}
+
+.institutions-section .data-note, /* Keep this for the table note on programs page */
+#programs-institutions-table-container .data-note { /* Target the new container for the table note */
+    text-align: right;
+    font-size: 0.9em;
+    color: var(--text-medium);
+    margin-bottom: 30px; /* Space between note and table */
+    padding-right: 25px; /* Align with container padding */
+}
+
+.table-responsive {
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 15px; /* Rounded corners for the whole table container */
+    box-shadow: 0 8px 30px var(--shadow-soft);
+    border: 1px solid var(--border-subtle);
+    background-color: var(--white-card); /* Background for the table itself */
+}
+
+.institutions-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+    min-width: 700px; /* Ensure table doesn't get too narrow on small screens */
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.institutions-table th,
+.institutions-table td {
+    padding: 18px 25px; /* Generous padding */
+    text-align: left;
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+.institutions-table th {
+    background-color: var(--primary-dark-blue);
+    color: var(--table-header-text);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: sticky; /* Keep header visible on scroll */
+    top: 0;
+    z-index: 1;
+}
+
+.institutions-table tbody tr:nth-child(even) {
+    background-color: var(--table-row-even-bg);
+}
+
+.institutions-table tbody tr:hover {
+    background-color: #DDE7F0; /* Slightly darker hover for rows */
+    cursor: pointer;
+}
+
+/* Specific column widths for better layout */
+.institutions-table th:first-child,
+.institutions-table td:first-child {
+    width: 35%; /* Give more space to institute name */
+}
+.institutions-table th:nth-child(2),
+.institutions-table td:nth-child(2) {
+    width: 10%; /* Category */
+}
+.institutions-table th:nth-child(3),
+.institutions-table td:nth-child(3) {
+    width: 25%; /* Exams Accepted */
+}
+.institutions-table th:nth-child(4),
+.institutions-table td:nth-child(4) {
+    width: 15%; /* Avg Salary */
+}
+.institutions-table th:last-child,
+.institutions-table td:last-child {
+    width: 15%; /* Total Fees */
+}
+
+/* The problematic block that was hiding institution cards is now removed */
 
 
 /* Footer */
@@ -718,15 +817,18 @@ img {
         padding: 12px 22px;
     }
 
-    .institution-card img {
-        height: 230px;
+    /* Table responsive adjustments */
+    .institutions-table {
+        min-width: 600px; /* Adjust min-width for smaller tablets */
+        font-size: 1em;
     }
-    .institution-card h3 {
-        font-size: 2.2em;
+    .institutions-table th,
+    .institutions-table td {
+        padding: 15px 20px;
     }
-    .institution-card a {
-        padding: 16px 35px;
-        font-size: 1.2em;
+    .institutions-section .data-note,
+    #programs-institutions-table-container .data-note {
+        padding-right: 20px;
     }
 
     .test-item {
@@ -745,8 +847,11 @@ img {
 
     #programs-page .container,
     #faculties-page .container,
-    #institutions-page .container,
     #tests-page .container {
+        padding: 0 20px;
+    }
+    /* Institutions grid for cards on mobile */
+    .institutions-grid {
         padding: 0 20px;
     }
 }
@@ -817,23 +922,19 @@ img {
         margin-bottom: 10px;
     }
 
-    .institution-card img {
-        height: 150px; /* Adjusted further */
-        margin-bottom: 20px;
+    /* Table responsive adjustments */
+    .institutions-table {
+        min-width: 500px; /* Further adjust min-width for mobile */
+        font-size: 0.9em;
     }
-    .institution-card h3 {
-        font-size: 1.6em; /* Adjusted further */
+    .institutions-table th,
+    .institutions-table td {
+        padding: 12px 15px;
     }
-    .institution-card .city {
-        font-size: 1.1em;
-    }
-    .institution-card p {
-        font-size: 1.0em;
-        margin-bottom: 10px; /* Adjusted for more data fields */
-    }
-    .institution-card a {
-        padding: 10px 20px;
-        font-size: 0.9em; /* Adjusted further */
+    .institutions-section .data-note,
+    #programs-institutions-table-container .data-note {
+        padding-right: 10px;
+        font-size: 0.8em;
     }
 
     .test-item {
@@ -849,13 +950,12 @@ img {
     .contact-section p {
         font-size: 1.05em; /* Adjusted further */
     }
-    .programs-grid, .faculty-grid, .institutions-grid, .tests-list {
+    .programs-grid, .faculty-grid, .tests-list, .institutions-grid { /* institutions-grid added */
         padding: 0 10px; /* Tighter padding for very small screens grids */
         gap: 30px;
     }
     #programs-page .container,
     #faculties-page .container,
-    #institutions-page .container,
     #tests-page .container {
         padding: 0 10px; /* Ensure consistency */
     }
