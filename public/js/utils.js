@@ -1,4 +1,13 @@
 /**
+ * Simple email validation
+ */
+export function validateEmail(email) {
+    return String(email)
+        .toLowerCase()
+        .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+}
+
+/**
  * Helper function to create DOM elements with optional classes, attributes, and content.
  * @param {string} tag - The HTML tag name (e.g., 'div', 'p', 'img').
  * @param {string|string[]} [classNames=[]] - A single class name or an array of class names.

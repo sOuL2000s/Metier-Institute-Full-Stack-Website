@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metier Study Center - Your Path to Success</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/icons/metier_m_icon.png"> <!-- Favicon updated -->
 </head>
 <body>
+    <div class="announcement-bar" style="background: var(--accent-gold); color: var(--primary-dark); text-align: center; padding: 8px; font-weight: 600; font-size: 0.9rem;">
+        🚀 Admissions Open for CAT 2025/26 Batches! Enroll Now.
+    </div>
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -35,13 +38,38 @@
     </header>
 
     <main>
-        <section id="hero" class="hero-section">
+        <section id="hero" class="hero-section reveal">
             <!-- Hero content will be rendered here by JS -->
         </section>
-        
-        <!-- Other sections like programs, faculties, institutions, tests will now be on separate pages -->
 
-        <section id="contact-quick-info" class="contact-section container">
+        <section id="stats" class="stats-section reveal">
+            <div id="stats-container" class="container">
+                <!-- Stats will be rendered here by JS -->
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="container reveal">
+            <h2>Why Choose Metier?</h2>
+            <div class="programs-grid">
+                <div class="card">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
+                    <h3>Expert Mentorship</h3>
+                    <p>Learn directly from industry veterans with decades of experience in MBA entrance preparation.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
+                    <h3>Proven Results</h3>
+                    <p>Consistent track record of students securing seats in Top-tier IIMs and other premier B-Schools.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                    <h3>Personalized Path</h3>
+                    <p>Customized learning strategies tailored to your strengths and weaknesses for maximum impact.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact-quick-info" class="contact-section container reveal">
             <h2>Contact Us</h2>
             <p>For inquiries, please reach out:</p>
             <p>Email: info@metierstudycenter.com</p> <!-- Email kept as no new email was provided -->
@@ -49,6 +77,10 @@
             <p>Address: Flat 7F Block A2, Sail City, New Pundag, Ranchi - 834007</p>
          </section>
     </main>
+
+    <a href="https://wa.me/918420425084" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <svg viewBox="0 0 448 512" width="32" height="32" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.8 69.7 27.2 106.2 27.2h.1c122.3 0 222-99.6 222-222 0-59.3-23-115.1-65.1-157.1zM223.9 446.7c-33.1 0-65.7-8.9-94.1-25.7l-6.7-4-69.8 18.3L72 367.1l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.7-186.6 184.7zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.6-9.2 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.6 9.2 31.7 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
 
     <footer class="footer">
         <div class="container">
