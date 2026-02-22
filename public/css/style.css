@@ -43,8 +43,8 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
     text-align: center;
 }
 
@@ -53,12 +53,12 @@ h2::after {
 }
 
 .container {
-    max-width: 1280px;
-    padding: 0 2rem;
+    max-width: 1200px;
+    padding: 0 1.5rem;
 }
 
 section {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 /* Re-mapped existing classes to new variables */
@@ -166,10 +166,10 @@ h1, h2, h3, h4 {
 
 h2 {
     text-align: center;
-    margin-top: 60px; /* Increased top margin for sections */
-    font-size: 3.4em; /* Slightly larger and more impactful */
+    margin-top: 40px;
+    font-size: 2.2rem;
     position: relative;
-    padding-bottom: 22px; /* Increased padding for prominent underline */
+    padding-bottom: 15px;
 }
 
 h2::after {
@@ -178,20 +178,15 @@ h2::after {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 110px; /* Wider underline */
-    height: 6px; /* Thicker underline */
-    background-color: var(--primary-blue);
-    border-radius: 3px;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-gold);
+    border-radius: 2px;
 }
 
 section {
-    padding: 100px 0;
-    background-color: var(--white-card);
-    margin-bottom: 0;
-    border-radius: 0;
-    box-shadow: none;
-    transition: none;
-    border: none;
+    padding: 60px 0;
+    background-color: var(--white-pure);
 }
 
 .card {
@@ -353,62 +348,57 @@ section {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../assets/images/hero_background.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../assets/images/hero_background.jpg') no-repeat center center/cover;
     color: #fff;
-    padding: 180px 20px;
+    padding: 100px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 700px; /* Slightly increased height */
-    margin-bottom: 35px;
-    border-radius: 15px;
-    box-shadow: 0 18px 45px var(--shadow-deep); /* Deeper, more impactful shadow */
+    min-height: 500px;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
     text-align: center;
-    border: 1px solid var(--border-subtle); /* Subtle border for definition */
 }
 
 .hero-content {
-    max-width: 950px; /* Slightly increased max-width */
+    max-width: 800px;
 }
 
 .hero-section h1 {
-    font-size: 5.2em; /* Slightly larger */
-    margin-bottom: 28px;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
     color: #fff;
-    font-weight: 700;
-    text-shadow: 4px 4px 12px rgba(0,0,0,0.7); /* Stronger text shadow */
-    letter-spacing: 1px; /* Subtle letter spacing for hero title */
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero-section p {
-    font-size: 1.9em; /* Slightly larger sub-text */
-    margin-bottom: 45px; /* More space before button */
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    line-height: 1.6;
-    letter-spacing: 0.2px; /* Subtle letter spacing */
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    line-height: 1.5;
+    opacity: 0.9;
 }
 
 .hero-section .btn {
     display: inline-block;
-    background-color: var(--accent-orange);
-    color: var(--text-light) !important;
-    padding: 22px 55px; /* More generous padding */
-    border-radius: 50px;
-    font-size: 1.5em; /* Larger font size for button */
-    font-weight: 700;
-    letter-spacing: 1.5px; /* Increased letter spacing */
-    text-transform: uppercase; /* NEW: Uppercase text for strong CTA */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35); /* Stronger button shadow */
-    outline: none; /* Remove default outline on focus */
+    background-color: var(--accent-gold);
+    color: var(--primary-dark) !important;
+    padding: 14px 32px;
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
 }
 
 .hero-section .btn:hover {
-    background-color: var(--accent-orange-hover);
+    background-color: var(--accent-gold-hover);
     text-decoration: none;
-    transform: translateY(-10px); /* More pronounced lift effect */
-    box-shadow: 0 12px 30px rgba(0,0,0,0.5); /* Deeper shadow on hover */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
 }
 
 /* Stats Section - Premium Academic Look */
@@ -433,11 +423,10 @@ section {
 
 .stat-item .stat-number {
     display: block;
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: var(--accent-gold);
-    margin-bottom: 0.5rem;
-    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.25rem;
 }
 
 .stat-item .stat-label {
@@ -474,34 +463,33 @@ section {
 
 
 .card {
-    background-color: var(--white-card);
-    border: 1px solid var(--border-subtle); /* NEW: Subtle border */
-    border-radius: 15px;
-    padding: 38px; /* More internal padding */
+    background-color: var(--white-pure);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
     text-align: center;
-    box-shadow: 0 6px 20px var(--shadow-soft), 0 2px 8px var(--shadow-soft); /* Layered shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .card:hover {
-    transform: translateY(-12px); /* More pronounced lift */
-    box-shadow: 0 15px 40px var(--shadow-elevated), 0 5px 15px var(--shadow-elevated); /* Deeper layered shadow on hover */
-    border-color: var(--primary-blue); /* Highlight border on hover */
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-gold);
 }
 
 .card h3 {
-    color: var(--primary-blue);
-    font-size: 2.1em; /* Slightly larger */
-    margin-bottom: 20px;
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .card p {
-    font-size: 1.18em; /* Slightly larger font */
-    color: var(--text-medium);
-    line-height: 1.7;
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
 /* Faculty Specific Styles */
@@ -591,8 +579,8 @@ section {
 }
 
 .institution-card h3 {
-    font-size: 2.4em;
-    margin-bottom: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
 .institution-card .city {
@@ -614,20 +602,16 @@ section {
     margin-right: 5px;
 }
 
-.institution-card a.btn { /* Target specifically the button within the card */
+.institution-card a.btn {
     display: inline-block;
-    background-color: var(--accent-orange);
-    color: var(--text-light) !important;
-    padding: 18px 40px;
-    border-radius: 50px;
-    font-size: 1.25em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-    margin-top: 20px;
-    align-self: center;
+    background-color: var(--accent-gold);
+    color: var(--primary-dark) !important;
+    padding: 10px 20px;
+    border-radius: var(--radius-lg);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 15px;
+    align-self: flex-start;
 }
 
 .institution-card a.btn:hover {
@@ -818,14 +802,56 @@ main {
 /* The problematic block that was hiding institution cards is now removed */
 
 
-/* Footer */
+/* Footer Redesign */
 .footer {
-    background-color: var(--primary-dark-blue);
-    color: var(--text-light);
-    text-align: center;
-    padding: 38px 0; /* More padding */
+    background-color: var(--primary-dark);
+    color: var(--text-on-dark);
+    padding: 60px 0 30px;
     margin-top: auto;
-    font-size: 1.08em; /* Slightly larger font */
+    border-top: 4px solid var(--accent-gold);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p, .footer-section li {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--text-on-dark);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.6;
 }
 
 /* Placeholder for images */
