@@ -5,41 +5,105 @@
     box-sizing: border-box;
 }
 
-/* Color Palette Variables - 2026 Modern Academic Redesign */
+/* Color Palette Variables - 2026 Premium Grade Redesign */
 :root {
-    --primary-navy: #1E3A8A; /* Royal Blue */
-    --primary-dark: #111827; /* Near Black/Navy */
-    --accent-gold: #F59E0B;  /* Amber/Gold for CTAs */
-    --accent-gold-hover: #D97706;
-    --secondary-bg: #F3F4F6;
+    --primary-navy: #0F172A;
+    --primary-dark: #1E293B; 
+    --accent-gold: #fbbf24;  /* Brighter Gold */
+    --accent-purple: #8b5cf6; /* Modern Vibrant Purple */
+    --accent-blue: #0ea5e9;   /* Professional Blue */
+    --accent-teal: #14b8a6;   /* Academic Teal */
+    --secondary-bg: #f4f7fa; /* Richer, subtle blue-tinted gray */
     --white-pure: #FFFFFF;
 
-    --text-main: #374151;
-    --text-muted: #6B7280;
-    --text-on-dark: #F9FAFB;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+    --text-on-dark: #f8fafc;
 
-    --border-light: #E5E7EB;
-    --radius-lg: 16px;
+    --border-light: #e2e8f0;
+    --radius-lg: 24px; /* Softer, more modern corners */
     --radius-full: 9999px;
 
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --gradient-premium: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    --gradient-vibrant: linear-gradient(135deg, #8b5cf6 0%, #0ea5e9 100%);
+    
+    --header-height: 80px;
+}
 
-    --header-height: 90px;
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-navy);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 5px;
+    border: 2px solid var(--primary-navy);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gold);
+}
+
+/* Firefox Support */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #334155 var(--primary-navy);
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-vibrant {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.card-vibrant::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 4px;
+    background: var(--gradient-vibrant);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card-vibrant:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.12);
+}
+
+.card-vibrant:hover::before {
+    opacity: 1;
 }
 
 /* Updated Global Styles */
 body {
-    font-family: 'Inter', 'Open Sans', sans-serif; /* Prefer Inter for modern look */
-    background-color: var(--white-pure);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary-bg);
     color: var(--text-main);
-    line-height: 1.6;
+    line-height: 1.8; /* Academic readability */
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Poppins', 'Montserrat', sans-serif;
-    color: var(--primary-dark);
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary-navy);
+    letter-spacing: -0.02em;
 }
 
 h2 {
@@ -58,7 +122,8 @@ h2::after {
 }
 
 section {
-    padding: 80px 0;
+    padding: 100px 0;
+    background-color: transparent; /* Allow the rich background to flow */
 }
 
 /* Re-mapped existing classes to new variables */
@@ -185,8 +250,8 @@ h2::after {
 }
 
 section {
-    padding: 60px 0;
-    background-color: var(--white-pure);
+    padding: 80px 0;
+    background-color: transparent;
 }
 
 .card {
@@ -204,15 +269,17 @@ section {
     box-shadow: var(--shadow-card);
 }
 
-/* Header */
+/* Header - Glassmorphic Redesign */
 .header {
-    background-color: var(--primary-dark-blue);
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: var(--text-light);
-    padding: 15px 0;
-    box-shadow: 0 8px 25px var(--shadow-deep); /* Deeper header shadow */
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header .container {
@@ -863,14 +930,15 @@ img {
 
 /* Responsive Adjustments */
 /* Tablet and smaller screens (up to 992px) - THIS IS WHERE THE NAV SWITCH OCCURS */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .container {
-        padding: 0 20px;
+        padding: 0 1.5rem;
+        max-width: 100%;
     }
 
     h2 {
-        font-size: 2.8em;
-        padding-bottom: 18px;
+        font-size: 2.25rem;
+        padding-bottom: 1rem;
     }
     h2::after {
         width: 100px;
@@ -879,17 +947,24 @@ img {
 
     /* Hide regular navigation on mobile/tablet */
     .navbar {
-        display: none; /* Controlled by JS via body.nav-open when mobile menu is open */
-        position: fixed; /* Use fixed for full screen overlay */
-        top: var(--header-height); /* Position below header */
+        display: none;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        height: calc(100vh - var(--header-height)); /* Full viewport height minus header */
-        background-color: var(--primary-dark-blue);
-        overflow-y: auto; /* Enable scrolling if menu items exceed height */
-        z-index: 999; /* Below toggle, above content */
-        transition: transform 0.3s ease-out;
-        transform: translateX(100%); /* Start off-screen to the right */
+        height: 100vh;
+        background-color: var(--primary-navy);
+        padding-top: 100px;
+        z-index: 999;
+        transition: transform 0.5s cubic-bezier(0.77,0,0.175,1);
+        transform: translateY(-100%);
+    }
+
+    body.nav-open .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(0);
     }
 
     .navbar ul {

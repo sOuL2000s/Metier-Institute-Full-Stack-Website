@@ -18,11 +18,17 @@ export function validateEmail(email) {
 export function createElement(tag, classNames = [], attributes = {}, content = null) {
     const element = document.createElement(tag);
 
-    // Add class names
+    // Add class names - support space-separated tailwind strings
     if (typeof classNames === 'string') {
-        element.classList.add(classNames);
+        const classes = classNames.split(' ').filter(c => c.trim().length > 0);
+        if (classes.length > 0) element.classList.add(...classes);
     } else if (Array.isArray(classNames)) {
-        element.classList.add(...classNames);
+        classNames.forEach(c => {
+            if (typeof c === 'string') {
+                const subClasses = c.split(' ').filter(sc => sc.trim().length > 0);
+                element.classList.add(...subClasses);
+            }
+        });
     }
 
     // Add attributes

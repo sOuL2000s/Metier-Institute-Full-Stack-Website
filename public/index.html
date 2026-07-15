@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metier Study Center - Your Path to Success</title>
+    <!-- Tailwind & Flowbite -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/icons/metier_m_icon.png"> <!-- Favicon updated -->
+    <link rel="icon" href="assets/icons/metier_m_icon.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            navy: '#0F172A',
+                            dark: '#1E293B',
+                        },
+                        accent: {
+                            gold: '#F59E0B',
+                            goldHover: '#D97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="announcement-bar" style="background: var(--accent-gold); color: var(--primary-dark); text-align: center; padding: 8px; font-weight: 600; font-size: 0.9rem;">
@@ -48,23 +77,31 @@
             </div>
         </section>
 
-        <section id="why-choose-us" class="container reveal">
-            <h2>Why Choose Metier?</h2>
-            <div class="programs-grid">
-                <div class="card">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
-                    <h3>Expert Mentorship</h3>
-                    <p>Learn directly from industry veterans with decades of experience in MBA entrance preparation.</p>
+        <section id="why-choose-us" class="py-24 bg-slate-50 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600">Why Choose Metier?</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto text-lg">We combine elite mentorship with data-driven strategies to ensure your success.</p>
                 </div>
-                <div class="card">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
-                    <h3>Proven Results</h3>
-                    <p>Consistent track record of students securing seats in Top-tier IIMs and other premier B-Schools.</p>
-                </div>
-                <div class="card">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
-                    <h3>Personalized Path</h3>
-                    <p>Customized learning strategies tailored to your strengths and weaknesses for maximum impact.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    <div class="card-vibrant p-10 reveal">
+                        <div class="w-16 h-16 mb-8 rounded-2xl bg-amber-100 flex items-center justify-center text-3xl shadow-inner">🎓</div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">Expert Mentorship</h3>
+                        <p class="text-slate-600 leading-relaxed">Learn directly from industry veterans with 15+ years of experience in MBA entrance preparation and IIM admissions.</p>
+                    </div>
+                    
+                    <div class="card-vibrant p-10 reveal">
+                        <div class="w-16 h-16 mb-8 rounded-2xl bg-purple-100 flex items-center justify-center text-3xl shadow-inner">📈</div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">Proven Results</h3>
+                        <p class="text-slate-600 leading-relaxed">A consistent track record of students securing seats in Top-tier IIMs (A, B, C), XLRI, and elite global B-Schools.</p>
+                    </div>
+                    
+                    <div class="card-vibrant p-10 reveal">
+                        <div class="w-16 h-16 mb-8 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl shadow-inner">🎯</div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">Personalized Path</h3>
+                        <p class="text-slate-600 leading-relaxed">Customized learning modules and mock analysis strategies tailored to your specific cognitive strengths and weaknesses.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -111,8 +148,14 @@
         </div>
     </footer>
 
+    <!-- Flowbite, GSAP, Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    
     <!-- JavaScript Files -->
-    <script type="module" src="js/navbar.js"></script> <!-- NEW: Mobile navbar JS -->
+    <script type="module" src="js/navbar.js"></script>
     <script type="module" src="js/utils.js"></script>
     <script type="module" src="js/components/heroSection.js"></script>
     <script type="module" src="js/main.js"></script>

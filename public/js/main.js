@@ -2,13 +2,18 @@
 import { renderHeroSection } from './components/heroSection.js';
 import { renderStatsSection } from './components/statsSection.js';
 import { setupMobileNavbarToggle } from './navbar.js';
-import { initScrollAnimations } from './animations.js';
+import { initScrollAnimations, initSmoothScroll } from './animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    initSmoothScroll();
     renderHeroSection('#hero');
     renderStatsSection('#stats-container');
     setupMobileNavbarToggle();
-    initScrollAnimations();
+    
+    // Allow content to render before triggering entrance animations
+    setTimeout(() => {
+        initScrollAnimations();
+    }, 150);
     
     // Lazy load images
     const images = document.querySelectorAll('img[data-src]');

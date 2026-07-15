@@ -20,7 +20,8 @@ const ALL_APP_DATA = {
     {
       "id": 1,
       "name": "Sabyasachi Sarkar",
-      "designation": "Highly Experienced Faculty in Test Prep Industry",
+      "designation": "Lead Mentor - QA/DILR/VARC",
+      "shortBio": "With over 15 years of experience in the test-prep industry, Sabyasachi has mentored thousands of students to the IIMs. His unique pedagogical approach simplifies complex concepts and focuses on strategic time management.",
       "subjects": [
         "Quantitative Ability",
         "Data Interpretation and Logical Reasoning",
