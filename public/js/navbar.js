@@ -4,6 +4,12 @@
  * This function should be called on DOMContentLoaded for every HTML page.
  */
 export function setupMobileNavbarToggle() {
+    // Automatically update the copyright year in the footer
+    const footerCopyright = document.querySelector('.footer-bottom p');
+    if (footerCopyright) {
+        footerCopyright.innerHTML = footerCopyright.innerHTML.replace('2025', new Date().getFullYear());
+    }
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navbar = document.querySelector('.navbar');
     const body = document.body;
